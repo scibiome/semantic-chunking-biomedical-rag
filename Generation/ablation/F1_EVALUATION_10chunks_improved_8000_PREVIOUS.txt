@@ -1,0 +1,8 @@
+10-CHUNK IMPROVED - Checkpoint 8000 (Previous Training - max_seq_length=1024) EVALUATION RESULTS
+================================================================================
+Precision:  0.6571
+Recall:     0.6430
+F1-Score:   0.6500
+================================================================================
+State dict: {'p': 455, 'c': 299, 'g': 465}
+Total samples: 465

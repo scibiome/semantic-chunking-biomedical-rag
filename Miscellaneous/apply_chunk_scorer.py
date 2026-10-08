@@ -1,0 +1,532 @@
+#!/usr/bin/env python3
+"""
+Use the trained chunk scorer to re-rank retrieved chunks and build
+triplet-extraction datasets that actually reflect the scorer output.
+
+This reads the existing top-N chunk candidates (from
+0_make_relation_chuck_and_scorer_data/*_topn_chucks_5*.json),
+scores each candidate with the trained chunk scorer, and writes new
+train/test JSON files that downstream triple training/generation
+can consume directly.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+import time
+from pathlib import Path
+from typing import Dict, Iterable, List, Optional, Tuple
+
+import torch
+import torch.nn.functional as F
+
+# Make the trained chunk scorer loader importable
+REPO_ROOT = Path(__file__).resolve().parents[1]
+sys.path.append(str(REPO_ROOT / "1_train_chuck_scorer_model"))
+from load_trained_model import load_trained_chunk_scorer  # noqa: E402
+
+
+def _read_jsonl(path: Path) -> Iterable[Dict]:
+    with path.open() as fh:
+        for raw in fh:
+            raw = raw.strip()
+            if not raw:
+                continue
+            yield json.loads(raw)
+
+
+def _clean_instruction(base_instruction: str) -> str:
+    """Strip any stale Examples section so we can rebuild from scorer output."""
+    if "Examples:" in base_instruction:
+        return base_instruction.split("Examples:", 1)[0].strip()
+    return base_instruction.strip()
+
+
+def _format_prompt(
+    instruction: str,
+    example_str: str,
+    context: str,
+    response: str,
+) -> str:
+    """Match the training formatting used by chunk scorer SFTTrainer."""
+    if example_str:
+        instruction = f"{instruction} Examples: {example_str}"
+    prompt = (
+        "Below is an instruction that describes a task, paired with an input that provides further context. "
+        "Write a response that appropriately completes the request.\n\n"
+        "### Instruction:\n"
+        f"{instruction}\n\n"
+        "### Input: \n"
+        f"{context}\n\n"
+        "### Response: \n"
+        f"{response}"
+    )
+    return prompt
+
+
+def _split_logits_on_response_token(
+    logits: torch.Tensor, input_ids: torch.Tensor, response_token_id: int
+) -> Tuple[torch.Tensor, torch.Tensor]:
+    """
+    Split logits into (instruction/context part, response part) using the
+    last occurrence of the Response token. This mirrors the training-time
+    cosine similarity computation in the custom trainer.
+    """
+    # input_ids shape: (1, seq_len)
+    positions = (input_ids[0] == response_token_id).nonzero(as_tuple=True)[0]
+    if positions.numel() == 0:
+        split_idx = logits.shape[1] // 2  # fallback to midpoint
+    else:
+        split_idx = positions[-1].item()
+
+    # Ensure we always have at least one token on each side
+    split_idx = max(0, min(split_idx, logits.shape[1] - 2))
+    left = logits[:, : split_idx + 1, :]
+    right = logits[:, split_idx + 1 :, :]
+    return left, right
+
+
+def score_candidate(
+    model,
+    tokenizer,
+    response_token_id: int,
+    base_instruction: str,
+    context: str,
+    response: str,
+    chunk_text: str,
+    relation: str,
+    max_length: int,
+) -> float:
+    """
+    Compute the cosine score for a single candidate chunk using the trained scorer.
+    """
+    example = f"Context: {chunk_text.strip()} Response: {relation.strip()}"
+    prompt = _format_prompt(base_instruction, example, context, response)
+    encoded = tokenizer(
+        prompt,
+        return_tensors="pt",
+        truncation=True,
+        max_length=max_length,
+    )
+    device = next(model.parameters()).device
+    encoded = {k: v.to(device) for k, v in encoded.items()}
+
+    with torch.no_grad():
+        outputs = model(**encoded, return_dict=True)
+        logits = outputs.logits  # (1, seq_len, vocab)
+
+    left, right = _split_logits_on_response_token(logits, encoded["input_ids"], response_token_id)
+    score = F.cosine_similarity(left.mean(dim=1), right.mean(dim=1)).item()
+    return score
+
+
+def rerank_split(
+    split_name: str,
+    model,
+    tokenizer,
+    response_token_id: int,
+    topn_path: Path,
+    knn_path: Path,
+    output_path: Path,
+    *,
+    max_examples: int,
+    max_length: int,
+    limit: Optional[int] = None,
+) -> None:
+    """
+    Re-rank one split (train/test) and write a new JSONL with scorer-backed examples.
+    """
+    print(f"\n{'='*60}")
+    print(f"🔄 {split_name.upper()}: Starting chunk scoring and re-ranking")
+    print(f"{'='*60}")
+    print(f"📂 Input files:")
+    print(f"   • TopN chunks: {topn_path}")
+    print(f"   • KNN demo: {knn_path}")
+    print(f"📤 Output file: {output_path}")
+    print(f"⚙️  Settings: max_examples={max_examples}, max_length={max_length}")
+    if limit:
+        print(f"⚠️  Limited to {limit} examples (debugging mode)")
+    
+    start_time = time.time()
+    examples_written = 0
+    scored_missing = 0
+    total_candidates_scored = 0
+    total_candidates_skipped = 0
+    score_stats = []  # Track score statistics
+    
+    # Count total examples first (for progress estimation)
+    print(f"📊 Counting examples in {topn_path.name}...")
+    total_examples = sum(1 for _ in _read_jsonl(topn_path))
+    if limit:
+        total_examples = min(total_examples, limit)
+    print(f"   Found {total_examples} examples to process")
+
+    with output_path.open("w") as out_f:
+        for idx, (topn_obj, knn_obj) in enumerate(zip(_read_jsonl(topn_path), _read_jsonl(knn_path))):
+            if limit is not None and idx >= limit:
+                break
+
+            base_instruction = _clean_instruction(knn_obj.get("instruction", ""))
+            context = knn_obj.get("context") or topn_obj.get("sentence", "")
+            response = knn_obj.get("response", "")
+
+            raw_candidates = topn_obj.get("topn_sim_chuck", {}) or {}
+            candidates: List[Tuple[str, str, float]] = []
+            candidates_in_example = 0
+            
+            for chunk_text, relation in raw_candidates.items():
+                chunk_text = (chunk_text or "").strip()
+                relation = (relation or "").strip()
+                if not chunk_text or not relation or chunk_text == "{}" or relation == "{}":
+                    total_candidates_skipped += 1
+                    continue
+                
+                try:
+                    score = score_candidate(
+                        model,
+                        tokenizer,
+                        response_token_id,
+                        base_instruction,
+                        context,
+                        response,
+                        chunk_text,
+                        relation,
+                        max_length,
+                    )
+                    candidates.append((chunk_text, relation, score))
+                    score_stats.append(score)
+                    candidates_in_example += 1
+                    total_candidates_scored += 1
+                except Exception as e:
+                    print(f"   ⚠️  Error scoring candidate at example {idx+1}: {e}")
+                    total_candidates_skipped += 1
+                    continue
+
+            candidates.sort(key=lambda x: x[2], reverse=True)
+
+            if not candidates:
+                scored_missing += 1
+                examples_str = ""
+                top_chunks: List[Dict] = []
+            else:
+                trimmed = candidates[:max_examples]
+                examples_str = " ".join(
+                    f"{i}. Context: {chunk} Response: {relation}"
+                    for i, (chunk, relation, _) in enumerate(trimmed, start=1)
+                )
+                top_chunks = [
+                    {"chunk": chunk, "relation": relation, "score": score}
+                    for chunk, relation, score in trimmed
+                ]
+
+            record = {
+                "instruction": f"{base_instruction} Examples: {examples_str}".strip()
+                if examples_str
+                else base_instruction,
+                "context": context,
+                "response": response,
+                "category": knn_obj.get("category", "triplet_extraction"),
+                "retrieved_chunks": top_chunks,
+            }
+            out_f.write(json.dumps(record))
+            out_f.write("\n")
+            examples_written += 1
+
+            # Progress logging with timing
+            if (idx + 1) % 100 == 0:
+                elapsed = time.time() - start_time
+                rate = (idx + 1) / elapsed if elapsed > 0 else 0
+                eta_seconds = (total_examples - (idx + 1)) / rate if rate > 0 else 0
+                eta_minutes = eta_seconds / 60
+                
+                avg_score = sum(score_stats[-100:]) / min(100, len(score_stats)) if score_stats else 0
+                print(f"   • Progress: {idx + 1}/{total_examples} examples "
+                      f"({100*(idx+1)/total_examples:.1f}%) | "
+                      f"Rate: {rate:.2f} ex/s | "
+                      f"ETA: {eta_minutes:.1f} min | "
+                      f"Avg score: {avg_score:.4f} | "
+                      f"Candidates scored: {total_candidates_scored}")
+
+    elapsed_total = time.time() - start_time
+    elapsed_minutes = elapsed_total / 60
+    
+    print(f"\n{'='*60}")
+    print(f"✅ {split_name.upper()}: Completed successfully")
+    print(f"{'='*60}")
+    print(f"📊 Statistics:")
+    print(f"   • Examples processed: {examples_written}")
+    print(f"   • Total candidates scored: {total_candidates_scored}")
+    print(f"   • Candidates skipped: {total_candidates_skipped}")
+    if score_stats:
+        print(f"   • Score statistics:")
+        print(f"     - Min: {min(score_stats):.4f}")
+        print(f"     - Max: {max(score_stats):.4f}")
+        print(f"     - Mean: {sum(score_stats)/len(score_stats):.4f}")
+        print(f"     - Median: {sorted(score_stats)[len(score_stats)//2]:.4f}")
+    print(f"   • Examples with no valid candidates: {scored_missing}")
+    print(f"   • Total time: {elapsed_minutes:.2f} minutes ({elapsed_total:.1f} seconds)")
+    print(f"   • Average time per example: {elapsed_total/examples_written:.2f} seconds")
+    print(f"📁 Output written to: {output_path}")
+    if scored_missing:
+        print(f"   ⚠️  {scored_missing} examples had no valid candidates; kept base instruction only.")
+
+
+def parse_args() -> argparse.Namespace:
+    base_dir = Path(__file__).resolve().parent
+    # DDI dataset paths (default when no --variant)
+    default_topn_train = REPO_ROOT / "0_make_relation_chuck_and_scorer_data_DDI_FIXED" / "train_data_topn_chucks_5_ddi.json"
+    default_topn_test = REPO_ROOT / "0_make_relation_chuck_and_scorer_data_DDI_FIXED" / "test_data_topn_chucks_5_ddi.json"
+    default_knn_train = base_dir / "KNN_ddi_train.json"
+    default_knn_test = base_dir / "KNN_ddi_test.json"
+    default_checkpoint = REPO_ROOT / "0_make_relation_chuck_and_scorer_data" / "1_train_chuck_scorer_model" / "Our_model_ddi_fixed" / "checkpoint-1000"
+
+    parser = argparse.ArgumentParser(description="Apply the trained chunk scorer to rerank top-N chunks.")
+    parser.add_argument(
+        "--variant",
+        choices=["scored", "scored_ner", "base_ner", "chemprot_improved", "ddi_improved", "chemprot_semantic_prop", "ddi_semantic_prop"],
+        default=None,
+        help="Use preset paths for 'scored', 'scored_ner', 'base_ner', 'chemprot_improved', 'ddi_improved', 'chemprot_semantic_prop', or 'ddi_semantic_prop' (DDI Semantic+Proposition pipeline).",
+    )
+    parser.add_argument("--checkpoint", type=Path, default=default_checkpoint, help="Path to chunk scorer checkpoint dir.")
+    parser.add_argument("--topn-train", type=Path, default=default_topn_train, help="train_data_topn_chucks_5*.json path")
+    parser.add_argument("--topn-test", type=Path, default=default_topn_test, help="test_data_topn_chucks_5*.json path")
+    parser.add_argument("--knn-train", type=Path, default=default_knn_train, help="KNN train JSON path")
+    parser.add_argument("--knn-test", type=Path, default=default_knn_test, help="KNN test JSON path")
+    parser.add_argument("--output-train", type=Path, default=base_dir / "train_triplet_chunk_scorer_ddi.json", help="Output JSONL for train")
+    parser.add_argument("--output-test", type=Path, default=base_dir / "test_triplet_chunk_scorer_ddi.json", help="Output JSONL for test")
+    parser.add_argument("--max-examples", type=int, default=3, help="Top-K chunks to keep in the instruction examples")
+    parser.add_argument("--max-length", type=int, default=1024, help="Tokenization max_length for scorer inputs")
+    parser.add_argument("--limit", type=int, default=None, help="Optional cap on number of records (debugging)")
+    args = parser.parse_args()
+
+    # Apply preset paths for scored / scored_ner variants
+    if args.variant:
+        improved = REPO_ROOT / "0_make_relation_chuck_and_scorer_data_IMPROVED" / "hybrid_pipeline_steps_with_scoring"
+        trainer_base = REPO_ROOT / "0_make_relation_chuck_and_scorer_data" / "1_train_chuck_scorer_model"
+        if args.variant == "scored":
+            args.checkpoint = trainer_base / "Our_model_scored" / "checkpoint-1000"
+            args.topn_train = improved / "hybrid_train_data_topn_scored_5_with_scoring.json"
+            args.topn_test = improved / "hybrid_test_data_topn_scored_5_with_scoring.json"
+            args.knn_train = base_dir / "KNN_demo_train.json"
+            args.knn_test = base_dir / "KNN_demo_test.json"
+            args.output_train = base_dir / "train_triplet_chunk_scorer_scored.json"
+            args.output_test = base_dir / "test_triplet_chunk_scorer_scored.json"
+        elif args.variant == "scored_ner":
+            args.checkpoint = trainer_base / "Our_model_scored_ner" / "checkpoint-1000"
+            args.topn_train = improved / "hybrid_train_data_topn_scored_5_with_scoring_ner.json"
+            args.topn_test = improved / "hybrid_test_data_topn_scored_5_with_scoring_ner.json"
+            args.knn_train = base_dir / "KNN_demo_train.json"
+            args.knn_test = base_dir / "KNN_demo_test.json"
+            args.output_train = base_dir / "train_triplet_chunk_scorer_scored_ner.json"
+            args.output_test = base_dir / "test_triplet_chunk_scorer_scored_ner.json"
+        elif args.variant == "base_ner":
+            ner_base = REPO_ROOT / "0_make_relation_chuck_and_scorer_data_IMPROVED" / "hybrid_pipeline_steps" / "ner"
+            args.checkpoint = trainer_base / "Our_model_base_ner" / "checkpoint-1000"
+            args.topn_train = ner_base / "hybrid_train_data_topn_scored_5_ner.json"
+            args.topn_test = ner_base / "hybrid_test_data_topn_scored_5_ner.json"
+            args.knn_train = base_dir / "KNN_demo_train.json"
+            args.knn_test = base_dir / "KNN_demo_test.json"
+            args.output_train = base_dir / "train_triplet_chunk_scorer_base_ner.json"
+            args.output_test = base_dir / "test_triplet_chunk_scorer_base_ner.json"
+        elif args.variant == "chemprot_improved":
+            # ChemProt improved: checkpoint from chunk scorer job (Our_model_chemprot_improved/checkpoint-1000)
+            chemprot_improved = REPO_ROOT / "0_make_relation_chuck_and_scorer_data_CHEMPROT_IMPROVED"
+            args.checkpoint = trainer_base / "Our_model_chemprot_improved" / "checkpoint-1000"
+            args.topn_train = chemprot_improved / "train_data_topn_chucks_5_chemprot.json"
+            args.topn_test = chemprot_improved / "test_data_topn_chucks_5_chemprot.json"
+            args.knn_train = base_dir / "KNN_chemprot_train.json"
+            args.knn_test = base_dir / "KNN_chemprot_test.json"
+            args.output_train = base_dir / "train_triplet_chunk_scorer_chemprot_improved.json"
+            args.output_test = base_dir / "test_triplet_chunk_scorer_chemprot_improved.json"
+        elif args.variant == "ddi_improved":
+            # DDI improved: checkpoint from chunk scorer job (Our_model_ddi_improved/checkpoint-1000)
+            ddi_improved = REPO_ROOT / "0_make_relation_chuck_and_scorer_data_DDI_IMPROVED"
+            args.checkpoint = trainer_base / "Our_model_ddi_improved" / "checkpoint-1000"
+            args.topn_train = ddi_improved / "train_data_topn_chucks_5_ddi.json"
+            args.topn_test = ddi_improved / "test_data_topn_chucks_5_ddi.json"
+            args.knn_train = base_dir / "KNN_ddi_train.json"
+            args.knn_test = base_dir / "KNN_ddi_test.json"
+            args.output_train = base_dir / "train_triplet_chunk_scorer_ddi_improved.json"
+            args.output_test = base_dir / "test_triplet_chunk_scorer_ddi_improved.json"
+        elif args.variant == "chemprot_semantic_prop":
+            # ChemProt Semantic+Proposition: checkpoint from Our_model_Chemprot_SemanticProp/checkpoint-1000
+            chemprot_sp = REPO_ROOT / "0_make_relation_chuck_and_scorer_data_CHEMPROT_IMPROVED" / "Chemprot_SemanticProp" / "output"
+            args.checkpoint = trainer_base / "Our_model_Chemprot_SemanticProp" / "checkpoint-1000"
+            args.topn_train = chemprot_sp / "train_data_topn_chucks_5_semantic_prop_chemprot.json"
+            args.topn_test = chemprot_sp / "test_data_topn_chucks_5_semantic_prop_chemprot.json"
+            args.knn_train = base_dir / "KNN_chemprot_train.json"
+            args.knn_test = base_dir / "KNN_chemprot_test.json"
+            args.output_train = base_dir / "train_triplet_chunk_scorer_chemprot_semantic_prop.json"
+            args.output_test = base_dir / "test_triplet_chunk_scorer_chemprot_semantic_prop.json"
+        elif args.variant == "ddi_semantic_prop":
+            # DDI Semantic+Proposition: checkpoint from Our_model_DDI_SemanticProp/checkpoint-1000
+            ddi_sp = REPO_ROOT / "0_make_relation_chuck_and_scorer_data_DDI_IMPROVED" / "DDI_SemanticProp" / "output"
+            args.checkpoint = trainer_base / "Our_model_DDI_SemanticProp" / "checkpoint-1000"
+            args.topn_train = ddi_sp / "train_data_topn_chucks_5_semantic_prop_ddi.json"
+            args.topn_test = ddi_sp / "test_data_topn_chucks_5_semantic_prop_ddi.json"
+            args.knn_train = base_dir / "KNN_ddi_train.json"
+            args.knn_test = base_dir / "KNN_ddi_test.json"
+            args.output_train = base_dir / "train_triplet_chunk_scorer_ddi_semantic_prop.json"
+            args.output_test = base_dir / "test_triplet_chunk_scorer_ddi_semantic_prop.json"
+
+    return args
+
+
+def main() -> None:
+    script_start_time = time.time()
+    
+    print("\n" + "="*60)
+    print("🚀 Chunk Scorer Application Script")
+    print("="*60)
+    print(f"⏰ Start time: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())}")
+    
+    args = parse_args()
+
+    # For chemprot_improved: ensure ChemProt chunk scorer job has finished (checkpoint exists)
+    if args.variant == "chemprot_improved":
+        if not args.checkpoint.is_dir():
+            print(f"\n❌ ChemProt improved checkpoint not found: {args.checkpoint}")
+            print("   Run the ChemProt chunk scorer training job first and wait for it to complete.")
+            print("   Then run this script with --variant chemprot_improved again.")
+            sys.exit(1)
+        for label, path in [
+            ("topn train", args.topn_train),
+            ("topn test", args.topn_test),
+            ("KNN train", args.knn_train),
+            ("KNN test", args.knn_test),
+        ]:
+            if not path.exists():
+                print(f"\n❌ ChemProt improved input missing: {path}")
+                sys.exit(1)
+        print("   ✓ ChemProt chunk scorer checkpoint and inputs found; proceeding with apply step.")
+    # For ddi_improved: ensure DDI chunk scorer job has finished (checkpoint exists)
+    elif args.variant == "ddi_improved":
+        if not args.checkpoint.is_dir():
+            print(f"\n❌ DDI improved checkpoint not found: {args.checkpoint}")
+            print("   Run the DDI improved chunk scorer training job first and wait for it to complete.")
+            print("   Then run this script with --variant ddi_improved again.")
+            sys.exit(1)
+        for label, path in [
+            ("topn train", args.topn_train),
+            ("topn test", args.topn_test),
+            ("KNN train", args.knn_train),
+            ("KNN test", args.knn_test),
+        ]:
+            if not path.exists():
+                print(f"\n❌ DDI improved input missing: {path}")
+                sys.exit(1)
+        print("   ✓ DDI improved chunk scorer checkpoint and inputs found; proceeding with apply step.")
+    elif args.variant == "chemprot_semantic_prop":
+        if not args.checkpoint.is_dir():
+            print(f"\n❌ ChemProt Semantic Prop checkpoint not found: {args.checkpoint}")
+            print("   Run the ChemProt Semantic Prop chunk scorer training job first (Our_model_Chemprot_SemanticProp).")
+            print("   Then run this script with --variant chemprot_semantic_prop again.")
+            sys.exit(1)
+        for label, path in [
+            ("topn train", args.topn_train),
+            ("topn test", args.topn_test),
+            ("KNN train", args.knn_train),
+            ("KNN test", args.knn_test),
+        ]:
+            if not path.exists():
+                print(f"\n❌ ChemProt Semantic Prop input missing: {path}")
+                sys.exit(1)
+        print("   ✓ ChemProt Semantic Prop checkpoint and inputs found; proceeding with apply step.")
+    elif args.variant == "ddi_semantic_prop":
+        if not args.checkpoint.is_dir():
+            print(f"\n❌ DDI Semantic Prop checkpoint not found: {args.checkpoint}")
+            print("   Run the DDI Semantic Prop chunk scorer training job first (Our_model_DDI_SemanticProp).")
+            print("   Then run this script with --variant ddi_semantic_prop again.")
+            sys.exit(1)
+        for label, path in [
+            ("topn train", args.topn_train),
+            ("topn test", args.topn_test),
+            ("KNN train", args.knn_train),
+            ("KNN test", args.knn_test),
+        ]:
+            if not path.exists():
+                print(f"\n❌ DDI Semantic Prop input missing: {path}")
+                sys.exit(1)
+        print("   ✓ DDI Semantic Prop checkpoint and inputs found; proceeding with apply step.")
+
+    print(f"\n📋 Configuration:")
+    if args.variant:
+        print(f"   • Variant: {args.variant}")
+    print(f"   • Checkpoint: {args.checkpoint}")
+    print(f"   • Max examples per instruction: {args.max_examples}")
+    print(f"   • Max token length: {args.max_length}")
+    if args.limit:
+        print(f"   • ⚠️  DEBUG MODE: Limited to {args.limit} examples per split")
+    
+    # Check GPU memory before loading
+    if torch.cuda.is_available():
+        print(f"\n💾 GPU Memory (before model load):")
+        for i in range(torch.cuda.device_count()):
+            allocated = torch.cuda.memory_allocated(i) / 1024**3
+            reserved = torch.cuda.memory_reserved(i) / 1024**3
+            print(f"   GPU {i}: {allocated:.2f} GB allocated, {reserved:.2f} GB reserved")
+
+    print(f"\n📥 Loading chunk scorer from {args.checkpoint} ...")
+    load_start = time.time()
+    model, tokenizer = load_trained_chunk_scorer(str(args.checkpoint))
+    model.eval()
+    response_token_id = tokenizer.encode(" Response:", add_special_tokens=False)[-1]
+    load_time = time.time() - load_start
+    print(f"   ✅ Model loaded in {load_time:.2f} seconds")
+    print(f"   • Response token ID: {response_token_id}")
+    
+    # Check GPU memory after loading
+    if torch.cuda.is_available():
+        print(f"\n💾 GPU Memory (after model load):")
+        for i in range(torch.cuda.device_count()):
+            allocated = torch.cuda.memory_allocated(i) / 1024**3
+            reserved = torch.cuda.memory_reserved(i) / 1024**3
+            print(f"   GPU {i}: {allocated:.2f} GB allocated, {reserved:.2f} GB reserved")
+
+    # Process train split
+    rerank_split(
+        "train",
+        model,
+        tokenizer,
+        response_token_id,
+        args.topn_train,
+        args.knn_train,
+        args.output_train,
+        max_examples=args.max_examples,
+        max_length=args.max_length,
+        limit=args.limit,
+    )
+    
+    # Process test split
+    rerank_split(
+        "test",
+        model,
+        tokenizer,
+        response_token_id,
+        args.topn_test,
+        args.knn_test,
+        args.output_test,
+        max_examples=args.max_examples,
+        max_length=args.max_length,
+        limit=args.limit,
+    )
+    
+    # Final summary
+    total_time = time.time() - script_start_time
+    total_minutes = total_time / 60
+    print(f"\n{'='*60}")
+    print("🎉 Script completed successfully!")
+    print(f"{'='*60}")
+    print(f"⏰ End time: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())}")
+    print(f"⏱️  Total execution time: {total_minutes:.2f} minutes ({total_time:.1f} seconds)")
+    print(f"📁 Output files:")
+    print(f"   • Train: {args.output_train}")
+    print(f"   • Test: {args.output_test}")
+    print("="*60)
+    sys.exit(0)
+
+
+if __name__ == "__main__":
+    main()

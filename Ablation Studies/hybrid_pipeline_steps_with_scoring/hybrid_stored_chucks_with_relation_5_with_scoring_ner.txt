@@ -1,0 +1,963 @@
+interaction of homogeneous with mitochondrial atpase--##--INTERACTS_WITH
+affinity constant for  estramustine  binding to  tubulin  was determined by--##--INTERACTS_WITH
+potentiating effect of chlorothiazide (diuril)--##--INTERACTS_WITH
+no proteolysis of synapsin phosphorylated under similar conditions--##--INTERACTS_WITH
+sensitized to ovalbumin.--##--INTERACTS_WITH
+it is concluded that shp-1 phosphorylation is not--##--INTERACTS_WITH
+with an inverse effect according to acute or chronic consumption.--##--INTERACTS_WITH
+on the binding of estrogens to estrogen--##--INTERACTS_WITH
+a separate from tissue malignancy factor in mammary carcinoma--##--INTERACTS_WITH
+alcohols on the synthesis of lipase, lecithinase and--##--INTERACTS_WITH
+conjugation of the phenolic drug harmol (7-hydroxyl-1-methyl-9h-pyrido[3,4-b]indole) in the--##--INTERACTS_WITH
+the finding that  colchicine  binds to microtubule  protein subunits  isolated from cilia--##--INTERACTS_WITH
+ prolactin  regulation of  casein  gene expression: possible mediators.--##--INTERACTS_WITH
+effects of intravenous ethacrynic acid on the renal--##--INTERACTS_WITH
+midazolam hydroxylation by human liver microsomes in vitro:--##--INTERACTS_WITH
+morphine -like acting pethidine with the morphine antagonist--##--INTERACTS_WITH
+synapsin phosphorylated under similar conditions either by protein kinase c--##--INTERACTS_WITH
+possibly two additional endopeptidases interfere with the myotropic--##--INTERACTS_WITH
+the influence of drugs on the duration of--##--INTERACTS_WITH
+the effect of lysogenic induction with mitomycin c on--##--INTERACTS_WITH
+the mechanism of this stimulation is unknown.--##--INTERACTS_WITH
+17-hydroxycorticosteroids, acth responsiveness and hydrocortisone clearance in man.--##--INTERACTS_WITH
+oxide (no) synthase , stimulates the release of pancreatic--##--INTERACTS_WITH
+influence of insulin on the--##--INTERACTS_WITH
+the regulation of cartilage metabolism and exerts its effects by binding to the  igf-1 type 1 receptor--##--INTERACTS_WITH
+the influence of ammonium ion on--##--INTERACTS_WITH
+acid esters on their inhibitory action in relation to--##--INTERACTS_WITH
+of antineoplastic agents on induction of microsomal drug- metabolizing--##--INTERACTS_WITH
+cell line to study the regulation of angiotensinogen mrna--##--INTERACTS_WITH
+infusion for 120 min in three groups of fasted sprague-dawley rats--##--INTERACTS_WITH
+puromycin on insulin and growth-hormone actions in the--##--INTERACTS_WITH
+vitamin b12 on the biosynthesis of certain amino acids--##--INTERACTS_WITH
+effect of antineoplastic agents on the induction of--##--INTERACTS_WITH
+the effect of  phenylacetic acid  on  penicillin  production.--##--INTERACTS_WITH
+[synthesis of omega-carboxyacyl-l-phenylalanine-aryl esters and their use as--##--INTERACTS_WITH
+effect of proline on synthesis of collagen by--##--INTERACTS_WITH
+levels with a corresponding decrease in glutamate , aspartate,--##--INTERACTS_WITH
+the effects of phenobarbital and 3-methylcholanthrene on carbon monoxide--##--INTERACTS_WITH
+affinity constant for estramustine binding to tubulin was determined--##--INTERACTS_WITH
+the influence of ammonium ion on the plasma--##--INTERACTS_WITH
+modulate nmda receptors whereas barbiturates and some arthropod toxins--##--INTERACTS_WITH
+stimulating glucose transport by interacting predominantly with the insulin--##--INTERACTS_WITH
+corticosterone secretion by morphine-pentobarbital treated rats.--##--INTERACTS_WITH
+growth and differentiation through modulation of the relative expression--##--INTERACTS_WITH
+important modulator of elastin expression.--##--INTERACTS_WITH
+prolactin regulation of casein gene expression:--##--INTERACTS_WITH
+the stimulation of alkaline phosphatase activity, cellular vitamin d receptor mrna--##--INTERACTS_WITH
+and fibroblast growth factor regulate somatostatin gene expression.--##--INTERACTS_WITH
+melatonin modulation of estrogen -regulated proteins,--##--INTERACTS_WITH
+case of dna, the decrease in affinity was less.--##--INTERACTS_WITH
+9, 10-dimethyl-1, 2- dibenzanthracene in hypophysectomized rats.--##--INTERACTS_WITH
+4-tert-butylphenol by tyrosinase .--##--INTERACTS_WITH
+serve as a substrate for pertussis toxin .--##--INTERACTS_WITH
+with methandrostenolone (17alpha-17beta-hydroxy-androsta-1,4-dien-3-on)].--##--INTERACTS_WITH
+control of escherichia coli carbamyl phosphate synthetase by--##--INTERACTS_WITH
+ethacrynic acid on the renal handling of citrate--##--INTERACTS_WITH
+threonine biosynthesis, respectively, exhibited identical activity patterns during--##--INTERACTS_WITH
+on acid mucopolysaccharide synthesis in mouse skin.--##--INTERACTS_WITH
+endopeptidases interfere with the myotropic effects of neurokinins--##--INTERACTS_WITH
+the effect of lysogenic induction with mitomycin c--##--INTERACTS_WITH
+ability of receptor to interact with factor(s ) is--##--INTERACTS_WITH
+we used y(1)r/lacz transgenic mice to investigate the interaction between  npy ,  gaba  and--##--INTERACTS_WITH
+on carbon monoxide sensitive and insensitive azoreductase activities.--##--INTERACTS_WITH
+certain amino acids by ochromonas malhamnesis.--##--INTERACTS_WITH
+on the excretion of reducing steroids , 17-keto steroids--##--INTERACTS_WITH
+factors sbf and dsc1/mbf bind scb and mcb promoter--##--INTERACTS_WITH
+its inhibitory effects by activation of a tyrosine phosphatase--##--INTERACTS_WITH
+anions on plasma protein- thyroid hormone  interaction in vitro.--##--INTERACTS_WITH
+in escherichia coli in the presence of phenylalanine--##--INTERACTS_WITH
+receptors in nonconvulsive epilepsy was studied by intracerebroventricular--##--INTERACTS_WITH
+effect of pituitary hormones on carcinogenesis with 9,--##--INTERACTS_WITH
+antineoplastic agents on the induction of cytochrome p-450 and--##--INTERACTS_WITH
+as substrates for cathepsin g and chymotrypsin ].--##--INTERACTS_WITH
+on tyrosine hydroxylase activity in adrenals.--##--INTERACTS_WITH
+loop diuretics  might interact with this  glycoprotein , leading to--##--INTERACTS_WITH
+organic insecticides on enzymes. influence of the structure of--##--INTERACTS_WITH
+clearance of igf-i from the circulation.--##--INTERACTS_WITH
+morphine , medinal and urethane].--##--INTERACTS_WITH
+the finding that colchicine binds to microtubule protein subunits--##--INTERACTS_WITH
+effect of hexadimethrine bromide on aldosterone and corticosterone--##--INTERACTS_WITH
+line to study the regulation of angiotensinogen mrna levels--##--INTERACTS_WITH
+the catecholamins are certainly essential.--##--INTERACTS_WITH
+substrate for pertussis toxin .--##--INTERACTS_WITH
+effect of hormones on acid mucopolysaccharide synthesis in--##--INTERACTS_WITH
+serum in myotonic dystrophy treated with methandrostenolone (17alpha-17beta-hydroxy-androsta-1,4-dien-3-on)].--##--INTERACTS_WITH
+tyrosine residues in its activation motif.--##--INTERACTS_WITH
+interactions of alcohol with drugs are numerous, varied sometimes--##--INTERACTS_WITH
+influence of insulin on the incorporation of 2-14c- sodium--##--INTERACTS_WITH
+modulation of plasminogen activators and--##--INTERACTS_WITH
+and hydrocortisone clearance in man.--##--INTERACTS_WITH
+mice to investigate the interaction between npy , gaba--##--INTERACTS_WITH
+of  cyanide  and fluoride binding by ferric  horseradish peroxidase .--##--INTERACTS_WITH
+growth hormone-releasing factor and fibroblast growth factor regulate--##--INTERACTS_WITH
+the concentration of pontocaine hydrochloride in the cerebrospinal fluid--##--INTERACTS_WITH
+anterior pituitary is regulated by estrogen and suggest--##--INTERACTS_WITH
+exerts its effects by binding to the igf-1 type--##--INTERACTS_WITH
+synthesis of beta-galactosidase in escherichia coli in the--##--INTERACTS_WITH
+the influence of diphenhydramine on the--##--INTERACTS_WITH
+in vivo activity of cholesterol 7 alpha-hydroxylase .--##--INTERACTS_WITH
+phenylacetic acid on penicillin production.--##--INTERACTS_WITH
+treated with methandrostenolone (17alpha-17beta-hydroxy-androsta-1,4-dien-3-on)].--##--INTERACTS_WITH
+lecithinase and other enzymes by bacillus cereus.--##--INTERACTS_WITH
+chemotherapeutic agents on dehydrogenase activity of human cancer--##--INTERACTS_WITH
+of the myristylated protein kinase c substrate, ssecks : correlation with culture confluency, cell cycle phase and serum response.--##--INTERACTS_WITH
+of cholesterol 7 alpha-hydroxylase .--##--INTERACTS_WITH
+aspartate aminotransferase gene by inactivation of glucocorticoid receptor.--##--INTERACTS_WITH
+[research on the benzofuran series. xxi. inhibitory effect--##--INTERACTS_WITH
+interaction of gaba with pcp--##--INTERACTS_WITH
+factors affecting succinoxidase sensitivity toward oxidation--##--INTERACTS_WITH
+effect of antineoplastic agents on induction of microsomal--##--INTERACTS_WITH
+the benzofuran series. xxi. inhibitory effect of phenolic benzofuran--##--INTERACTS_WITH
+chromatin, suggesting that  hedamycin  binds more effectively to "linker" dna than to dna attached to the core of the  nucleosomes .--##--INTERACTS_WITH
+, and this phosphorylation reduced the affinity of smap--##--INTERACTS_WITH
+the effect of parathyroid hormone on adenyl cyclase--##--INTERACTS_WITH
+was to investigate the interaction of gaba (gamma aminobutyric--##--INTERACTS_WITH
+the reduction in binding sites available for atiii--##--INTERACTS_WITH
+factor in mammary carcinoma produced with synestrol ].--##--INTERACTS_WITH
+may be an important modulator of elastin expression.--##--INTERACTS_WITH
+effect of cortisone upon the tissue synthesis of--##--INTERACTS_WITH
+factors affecting succinoxidase sensitivity toward oxidation with bal--##--INTERACTS_WITH
+interaction of nalorphine with fen--##--INTERACTS_WITH
+activities varied with the specific substrate tested.--##--INTERACTS_WITH
+envelope by preventing the binding of nep-b to chromatin--##--INTERACTS_WITH
+the reduction in binding sites available--##--INTERACTS_WITH
+effects of polyamines on tyrosine hydroxylase activity in--##--INTERACTS_WITH
+the anterior pituitary is regulated by estrogen and suggest--##--INTERACTS_WITH
+diphenhydramine on the action of sympathomimetic amines .--##--INTERACTS_WITH
+effect of progesterone on the tyrosinase activity of--##--INTERACTS_WITH
+on aldosterone and corticosterone production by the rat adrenal.--##--INTERACTS_WITH
+triamcinolone and 2,4-dinitrophenol on the adenosinetriphosphatase activity and--##--INTERACTS_WITH
+(ii) dna synthesis was inhibited 80% by 5-fluoro-2'-deoxyuridine (fudr),--##--INTERACTS_WITH
+effect of cortisone upon the rise of serum antibody--##--INTERACTS_WITH
+pyruvate kinase from human meningioma by allosteric effectors--##--INTERACTS_WITH
+chloramphenicol, streptomycin and cycloheximide inhibit the synthesis of--##--INTERACTS_WITH
+levels of 17-hydroxycorticosteroids .--##--INTERACTS_WITH
+benzazepines , whereas n-monosubstituted carbamates appear to be--##--INTERACTS_WITH
+binding of est with ##rogens--##--INTERACTS_WITH
+also seen in the stimulation of alkaline phosphatase activity,--##--INTERACTS_WITH
+plasminogen activators and plasminogen activator inhibitors by tgf-beta ,--##--INTERACTS_WITH
+ampa and kainate receptors in nonconvulsive epilepsy was--##--INTERACTS_WITH
+n-monosubstituted carbamates appear to be--##--INTERACTS_WITH
+plants caused a rapid increase in root ammonia, glutamine,--##--INTERACTS_WITH
+adrenal cortex hormones on the movements of electrolytes--##--INTERACTS_WITH
+on the tyrosinase activity of melanoma s 91--##--INTERACTS_WITH
+analogues and polyamines all modulate nmda receptors whereas barbiturates--##--INTERACTS_WITH
+pyridoxal 5'-phosphate modulates expression of cytosolic aspartate--##--INTERACTS_WITH
+glutathione conjugation and cytochrome p-450 metabolism of methyl chloride--##--INTERACTS_WITH
+bile samples from the treated flounder, although significant amounts--##--INTERACTS_WITH
+unchanged glutathione conjugates of styrene oxide were the--##--INTERACTS_WITH
+melatonin modulation of estrogen -regulated proteins, growth factors,--##--INTERACTS_WITH
+effects of cancer chemotherapeutic agents on dehydrogenase activity--##--INTERACTS_WITH
+myotonic dystrophy treated with methandrostenolone (17alpha-17beta-hydroxy-androsta-1,4-dien-3-on)].--##--INTERACTS_WITH
+proteins are irreversibly phosphorylated, inhibited the subsequent assembly of--##--INTERACTS_WITH
+that shp-1 phosphorylation is not a consequence of--##--INTERACTS_WITH
+binding of aliphatic aldehydes to--##--INTERACTS_WITH
+bind scb and mcb promoter elements, respectively, and are--##--INTERACTS_WITH
+cytochrome p-450 metabolism of methyl chloride in vitro.--##--INTERACTS_WITH
+binding of aliphatic with aldehydes--##--INTERACTS_WITH
+with the gonadotrophins in regulating testicular function.--##--INTERACTS_WITH
+of cyanide and fluoride binding by ferric horseradish peroxidase--##--INTERACTS_WITH
+sulphate conjugation of the phenolic drug harmol (7-hydroxyl-1-methyl-9h-pyrido[3,4-b]indole)--##--INTERACTS_WITH
+a differential effect on induced histidase synthesis.--##--INTERACTS_WITH
+[the influence of adrenal cortex hormones--##--INTERACTS_WITH
+the metabolism of the catecholamins are certainly essential.--##--INTERACTS_WITH
+the effect of  benemid  on plasma  penicillin  levels.--##--INTERACTS_WITH
+chloramphenicol, streptomycin and cycloheximide inhibit the synthesis of chloroplast--##--INTERACTS_WITH
+the oxidation of 4-tert-butylphenol by tyrosinase .--##--INTERACTS_WITH
+pdi and glutathione -mediated reduction of the glutathionylated variant--##--INTERACTS_WITH
+regulation of m2-type pyruvate kinase--##--INTERACTS_WITH
+pethidine with the morphine antagonist nalorphine ].--##--INTERACTS_WITH
+[on the problem of the effect of analeptics--##--INTERACTS_WITH
+para-aminophenol on plasma levels of 17-hydroxycorticosteroids .--##--INTERACTS_WITH
+acute effects of angiotensin-ii-amide on aldosterone and corticosterone--##--INTERACTS_WITH
+interaction of homogeneous mitochondrial atpase--##--INTERACTS_WITH
+igfbp-3 levels to insulin treatment in the present study--##--INTERACTS_WITH
+aspartate kinase and homoserine dehydrogenase enzymes, which are--##--INTERACTS_WITH
+on synthesis of collagen by cells in culture.--##--INTERACTS_WITH
+the specific substrate tested.--##--INTERACTS_WITH
+that pma exerts its inhibitory effects by activation of--##--INTERACTS_WITH
+insulin-like growth factor-i (igf-i) interact with the gonadotrophins in--##--INTERACTS_WITH
+upon the tissue synthesis of acid mucopolysaccharide .--##--INTERACTS_WITH
+effects of igf-i infusion on insulin and amylin--##--INTERACTS_WITH
+spinal anesthesia, and the influence of epinephrine in prolonging--##--INTERACTS_WITH
+the effect of puromycin on insulin and growth-hormone--##--INTERACTS_WITH
+inhibits half of insulin binding is only 20 times--##--INTERACTS_WITH
+liver microsomes in vitro: inhibition by fluoxetine , nor--##--INTERACTS_WITH
+parathyroid hormone on adenyl cyclase in rat kidney.--##--INTERACTS_WITH
+exhibit some overlap in binding to m protein but--##--INTERACTS_WITH
+synthetic peptide corresponding p-itim bound shc, lyn and the--##--INTERACTS_WITH
+loop diuretics might interact with this glycoprotein ,--##--INTERACTS_WITH
+synthesis of clinically effective drugs .--##--INTERACTS_WITH
+chlorothiazide (diuril) in combination with antihypertensive agents ;--##--INTERACTS_WITH
+considerably less than maximum binding to polymeric nucleosomes or--##--INTERACTS_WITH
+the glutathionylated variant of human lysozyme .--##--INTERACTS_WITH
+on the plasma 17-hydroxycorticosteroids in normal and thiouracil--##--INTERACTS_WITH
+poly(a ) is markedly decreased by autophosphorylation of the--##--INTERACTS_WITH
+insolubilised synthetic peptide corresponding p-itim bound shc, lyn--##--INTERACTS_WITH
+monoclonal antibodies  to epitopes 2 and 3, which exhibit some overlap in binding to  m protein  but do--##--INTERACTS_WITH
+mapks by dual phosphorylation of threonine and tyrosine residues--##--INTERACTS_WITH
+cell-cycle regulated expression and serine phosphorylation--##--INTERACTS_WITH
+duration of hexobarbital and hydroxydione narcosis in mice.--##--INTERACTS_WITH
+17-hydroxycorticosteroids in normal and thiouracil treated guinea pigs.--##--INTERACTS_WITH
+exchange reaction of fresh liver mitochondria.--##--INTERACTS_WITH
+phosphorylation reduced the affinity of smap for smg--##--INTERACTS_WITH
+carbamyl phosphate synthetase by purine and pyrimidine--##--INTERACTS_WITH
+ephedrine on the excretion of reducing steroids ,--##--INTERACTS_WITH
+the ability of  receptor  to interact with  factor(s ) is encoded--##--INTERACTS_WITH
+a study of the interaction of nalorphine with fentanyl--##--INTERACTS_WITH
+these peptides or their structures may form the basis for the--##--INTERACTS_WITH
+during endochondral ossification is regulation of chondrocyte growth and--##--INTERACTS_WITH
+plasma protein- thyroid hormone interaction in vitro.--##--INTERACTS_WITH
+abdominal pain, improves gi motility, and inhibits inflammatory cytokine, {  tnf-α  }, probably mediated--##--INHIBITS
+(methionine, isoleucine and threonine) followed by the inhibition of protein biosynthesis in saccharomyces cerevisiae.--##--INHIBITS
+n-acetylcysteine (nac), whereas the reduced and free (non-protein bound)--##--INHIBITS
+there was a moderate effect on reduction of {  c-reactive protein  } (effect--##--INHIBITS
+acetic acid was competitively inhibited by salicylic acid ,--##--INHIBITS
+pentobarbital  inhibition of  sulfanilamide  acetylation in pigeon--##--INHIBITS
+inhibition of yeast hexokinase by--##--INHIBITS
+the inhibition of the sarcoplasmic calcium--##--INHIBITS
+increase in dietary lysine caused 10, 4, 20 and--##--INHIBITS
+(nicotiana tabacum) leaf discs inhibited glycolate synthesis and photorespiration--##--INHIBITS
+suppression of gene a with h--##--INHIBITS
+released from bovine beta-casein by chymosin, trypsin or--##--INHIBITS
+inhibition of uterine receptor binding--##--INHIBITS
+a moderate effect on reduction of { c-reactive protein--##--INHIBITS
+glutathione , caused the induction of mn superoxide dismutase--##--INHIBITS
+inhibition of cytochrome oxidase by--##--INHIBITS
+tryptophan or phenylalanine , but not by 2 mm alpha-aminoadipate or glutamate.--##--INHIBITS
+suppression by actidione of development--##--INHIBITS
+inhibition of cytochrome oxidase with oxytetracycline--##--INHIBITS
+pirenzepine , which selectively blocks muscarinic cholinergic receptors .--##--INHIBITS
+inhibition of yeast with hexokinase--##--INHIBITS
+1j/cm(2), [ lllt ] reduced { mpo } activity--##--INHIBITS
+and of insulin to inhibit igfbp-1 promoter activity in--##--INHIBITS
+fructose 1,6- diphosphate , a reactivator of cu++-inhibited--##--INHIBITS
+inhibitory of es with as--##--INHIBITS
+the inhibition of succinate dehydrogenase by--##--INHIBITS
+wogonoside, luteolin-3'-glucuronide, and glycyrrhizin, inhibited beta-glucuronidase using sn-38-glucuronide as--##--INHIBITS
+of 1j/cm(2), [  lllt  ] reduced {  mpo  } activity as--##--INHIBITS
+by fpr-1 can be suppressed by genes controlling a--##--INHIBITS
+mercuric chloride, and p-aminobenzoic acid completely inactivated the  protease .--##--INHIBITS
+secretion by using  pirenzepine , which selectively blocks  muscarinic cholinergic receptors .--##--INHIBITS
+improves gi motility, and inhibits inflammatory cytokine, { tnf-α--##--INHIBITS
+that, although etoh may inhibit the nitrobenzylthioinosine-sensitive ado transporter--##--INHIBITS
+and p-aminobenzoic acid completely inactivated the protease .--##--INHIBITS
+diazoxide or phentolamine, the inhibitory effects of phenylephrine on--##--INHIBITS
+4, 20 and 50-fold increases in lysine concentrations in--##--INHIBITS
+the ascorbate-dependent copper monooxygenases, pam and dopamine-beta-monooxygenase, established--##--INHIBITS
+demonstrate that, although  etoh  may inhibit the nitrobenzylthioinosine-sensitive  ado transporter , intoxicating concentrations--##--INHIBITS
+of the clinically useful drugs of this class have--##--INHIBITS
+i activity was potently inhibited by 2 mm glutamine,--##--INHIBITS
+inhibition of uterine receptor binding with estradiol--##--INHIBITS
+suggesting the common transport between acetic acid and salicylic acid .--##--INHIBITS
+down-regulation of cd27 from the t cell surface--##--INHIBITS
+been inhibitors of dihydrofolate reductase (dhfr), a key enzyme in the synthesis of thymidylate, and therefore, of dna.--##--INHIBITS
+ea ] intervention or inhibitor injection significantly attenuated hyperalgesia,--##--INHIBITS
+insulin to inhibit igfbp-1 promoter activity in h4iie and--##--INHIBITS
+was considerably greater during inhibition of angiotensin i converting--##--INHIBITS
+{ tnf-α } were decreased in the real [--##--INHIBITS
+threonine) followed by the inhibition of protein biosynthesis in--##--INHIBITS
+to  p-fluorophenylalanine  by fpr-1 can be suppressed by  genes  controlling a requirement--##--INHIBITS
+wogonoside, luteolin-3'-glucuronide, and glycyrrhizin, inhibited beta-glucuronidase using sn-38-glucuronide--##--INHIBITS
+angiotensin ii inhibitory analogue reduced arterial blood pressure and--##--INHIBITS
+the function of gaba at the level of--##--INHIBITS
+of healthy volunteers was decreased after oral administration of--##--INHIBITS
+inhibition of erythropoietic effects of--##--INHIBITS
+which are expected to deplete intracellular glutathione , caused--##--INHIBITS
+kinetic experiments with the ascorbate-dependent copper monooxygenases, pam--##--INHIBITS
+suppression of gene a in--##--INHIBITS
+[comparative study of the inhibitory effect of eserine on--##--INHIBITS
+the effect of drugs which down-regulate the function--##--INHIBITS
+pentobarbital inhibition of sulfanilamide acetylation in--##--INHIBITS
+il-6, and {  tnf-α  } were decreased in the real [  apa  ] group.--##--INHIBITS
+of  diazoxide  or phentolamine, the inhibitory effects of  phenylephrine  on both hr--##--INHIBITS
+in experiments with  diethyl maleate  which depletes hepatic  glutathione  without causing--##--INHIBITS
+peptides inhibitory to endopeptidase and aminopeptidase--##--INHIBITS
+with diethyl maleate which depletes hepatic glutathione without causing--##--INHIBITS
+be at least partially caused by release of soluble--##--INHIBITS
+sessions of [  ea  ] intervention or inhibitor injection significantly attenuated hyperalgesia, reversed the incr ea--##--INHIBITS
+inhibition of sarcoplasmic with calcium--##--INHIBITS
+inhibition of hormones with erythropoietin antisera--##--INHIBITS
+a reactivator of cu++-inhibited  pyruvate kinase  from liver.--##--INHIBITS
+suppression of actidione with liver--##--INHIBITS
+tobacco (nicotiana tabacum) leaf discs inhibited  glycolate  synthesis and photorespiration and--##--INHIBITS
+inhibition of succinate dehydrogenase with ox--##--INHIBITS
+mouse peritoneal macrophages were activated in vitro by the--##--PRODUCES
+function to produce prostaglandin e .--##--PRODUCES
+specific proteolysis of the c-mos proto-oncogene product by--##--PRODUCES
+large multimers, we hypothesize that the structural defect--##--PRODUCES
+(ms) cells , which produced both prl and gh--##--PRODUCES
+in response to platelet activating factor and its receptor--##--PRODUCES
+designated macrophage-activating factor (maf) produced by a murine t--##--PRODUCES
+the hdc were exhaustively depleted of cells expressing ia--##--PRODUCES
+l-asparaginase production by the rumen anaerobe--##--PRODUCES
+increase in specific antibody produced by lymphocytes stimulated with--##--PRODUCES
+by an indirect panning technique,--##--PRODUCES
+cell cultures and the number of cells in--##--PRODUCES
+the c-mos proto-oncogene product by calpain on fertilization--##--PRODUCES
+specifically contain the large multimers, we hypothesize that--##--PRODUCES
+ collagenase  production by human  skin fibroblasts .--##--PRODUCES
+myometrium showing a peak production on day 6.--##--PRODUCES
+antibody produced by lymphocytes stimulated with influenza virus in--##--PRODUCES
+factor and its receptor antagonist sri 63-441.--##--PRODUCES
+collagenase production by human skin fibroblasts--##--PRODUCES
+pattern of uterine pgf production on days 5-6.5 was--##--PRODUCES
+l-asparaginase production by the rumen anaerobe vibrio succinogenes--##--PRODUCES
+normal and tumorous pituitaries with the rhpa and--##--PRODUCES
+a heat-stable glycolipid hemolysin produced by p. aeruginosa .--##--PRODUCES
+potential of adrenocortical cell cultures and the number--##--PRODUCES
+as in function to produce prostaglandin e .--##--PRODUCES
+effects appear to be caused by a heat-stable glycolipid--##--PRODUCES
+, and postoperative complications in 16.--##--PROCESS_OF
+mirror-writing and reversed repetition of digits in a--##--PROCESS_OF
+hormone levels in the reproductive system of normospermic--##--PROCESS_OF
+topical administration of 0.5% vanadate lowers intraocular pressure--##--PROCESS_OF
+plasma levels of insulin, c-peptide and glucose were--##--PROCESS_OF
+1982, who developed a pneumopericardium (ppc) while receiving--##--PROCESS_OF
+psychiatric morbidity among spouses of patients with stroke--##--PROCESS_OF
+spouses of patients with stroke .--##--PROCESS_OF
+consequences of hydatidosis in man and livestock ,--##--PROCESS_OF
+and after percutaneous electrocoagulation of the gasserian ganglion--##--PROCESS_OF
+tiapamil prevents hemodynamic alterations accompanying development of high blood--##--PROCESS_OF
+essential hypertension or severe pre-eclampsia using a 133xe clearance technique--##--PROCESS_OF
+ovine prolactin (o-prl) binding to mammary gland membranes--##--PROCESS_OF
+have been studied in patients with duodenal ulcer disease--##--PROCESS_OF
+patients with adenocarcinoma of the pancreas were reviewed.--##--PROCESS_OF
+by her monocytes ultimately cause the patient's insulin resistance--##--PROCESS_OF
+with cob aggravated by pulmonary emphysema and chronic--##--PROCESS_OF
+neoplastic recurrence was detected in 9 patients ,--##--PROCESS_OF
+persons with mitral stenosis ; clinical aspects].--##--PROCESS_OF
+examination given during the clerkship.--##--PROCESS_OF
+results of this plasma exchange, 5 out of 10--##--PROCESS_OF
+hemodynamics, blood pulmonary shunting and evaluation of oxygen transport--##--PROCESS_OF
+recurrent disease and tumors that are hormone-receptor-negative, or--##--PROCESS_OF
+tumors that are hormone-receptor-negative, or tumors that are--##--PROCESS_OF
+children and in patients with adrenocortical disorders.--##--PROCESS_OF
+the renin-angiotensin-aldosterone system in normotensive and hypertensive patients--##--PROCESS_OF
+with pneumococcal meningitis showed increased fibrinolytic activity as assessed--##--PROCESS_OF
+with non-hodgkin's lymphoma (nhl) of intermediate or high--##--PROCESS_OF
+who was forced to be absent from--##--PROCESS_OF
+anemia , minimal rectal bleeding, and thrombocytopenia.--##--PROCESS_OF
+local anesthesia for  patients  with  hemophilia .--##--PROCESS_OF
+nursing of a patient with acute leukemia who--##--PROCESS_OF
+repetition of digits in a right-handed patient with--##--PROCESS_OF
+coronary heart disease (chd) is suggested by the--##--PROCESS_OF
+and oxazepam in the treatment of insomnia in hospitalized--##--PROCESS_OF
+the location of neoplastic recurrence was detected in--##--PROCESS_OF
+the genesis of coronary heart disease (chd) is--##--PROCESS_OF
+in the patients with angiodysplasia than in a--##--PROCESS_OF
+and episodic hyperpnea were associated with agenesis of the--##--PROCESS_OF
+urinary excretion of dehydroepiandrosterone in normal children and--##--PROCESS_OF
+ovine prolactin (o-prl) binding--##--PROCESS_OF
+of (1,2-3h) testosterone as affected by ddt pretreatment in--##--PROCESS_OF
+prostatic and hepatic metabolism of (1,2-3h) testosterone as--##--PROCESS_OF
+in 10 patients , and postoperative complications in--##--PROCESS_OF
+lymphoproliferative disorders following whole-body therapeutic gamma-irradiation].--##--PROCESS_OF
+combination of malaria and visceral leishmaniasis in a--##--PROCESS_OF
+on the obstetrics and gynecology national board part ii examination--##--PROCESS_OF
+[induced visual hallucinations and visual adaptation disorders in--##--PROCESS_OF
+in man and livestock , a damage of--##--PROCESS_OF
+with myopia of -3.0 to -5.75 d, only--##--PROCESS_OF
+insulin, c-peptide and glucose were monitored for 24 hours--##--PROCESS_OF
+and chemotherapy received intellectual evaluations at least one year following--##--PROCESS_OF
+[planning of teaching in clinical nursing and its--##--PROCESS_OF
+diagnosis of right-sided abdominal pain in the sexually--##--PROCESS_OF
+significantly more prevalent in the patients with angiodysplasia--##--PROCESS_OF
+in 30 patients with myelotoxic agranulocytosis.--##--PROCESS_OF
+the reproductive system of normospermic men and patients--##--PROCESS_OF
+on lambliasis and trichomoniasis in white mice ].--##--PROCESS_OF
+new semi-synthetic vinca alkaloid analogue, is as active--##--PROCESS_OF
+mpx were found primarily in patients with non-hodgkin's lymphoma (nhl)--##--PROCESS_OF
+with seborrheic keratosis, 1 with a fibroepithelial tumor--##--PROCESS_OF
+and speech audiometry in chronic suppurative otitis and--##--PROCESS_OF
+in each patient, poorer right ventricular contractility in--##--PROCESS_OF
+presumably associated with aluminium induced encephalopathy in patients receiving--##--PROCESS_OF
+in clinical nursing and its evaluation. surgical nursing--##--PROCESS_OF
+oral contraceptive and platelet lipid biosynthesis in female--##--PROCESS_OF
+immune status in 14 cob patients and 53--##--PROCESS_OF
+seasonal rhinitis in the spring].--##--PROCESS_OF
+patients with fulminant hepatic failure survived.--##--PROCESS_OF
+lower than those presumably associated with aluminium induced encephalopathy--##--PROCESS_OF
+that navelbine, a new semi-synthetic vinca alkaloid analogue,--##--PROCESS_OF
+patient's insulin resistance awaits further studies.--##--PROCESS_OF
+primary arterial hypertension of mild and moderate degree].--##--PROCESS_OF
+on 1,2-dimethylhydrazine (dmh)-induced colon cancer in male, random bred, sprague-dawley (s-d)--##--PROCESS_OF
+and after the oral administration of pindolol. study in--##--PROCESS_OF
+and visceral leishmaniasis in a child of two--##--PROCESS_OF
+supraclavicular adenopathy, children sick with fever of one week's duration--##--PROCESS_OF
+mental retardation, ataxia and episodic hyperpnea were associated--##--PROCESS_OF
+animals had a marked positive chronotropic reaction; 2.--##--PROCESS_OF
+diuretic and saluretic in the conscious rat .--##--PROCESS_OF
+thus, impairment in 65zncl2 absorption in the patients selected for this study was only evident in undernourished persons with moderate or severe disease activity, but biochemical evidence of zinc deficiency was uncommon, and--##--PROCESS_OF
+ sleep  in brain-damaged  patients .--##--PROCESS_OF
+effect of nystatin on lambliasis and trichomoniasis in--##--PROCESS_OF
+acute scrotal pain in children : prospective study--##--PROCESS_OF
+systolic time intervals (sti) have been measured in--##--PROCESS_OF
+and visual adaptation disorders in patients with delirium tremens].--##--PROCESS_OF
+cellular immunity in immunized animals was studied using--##--PROCESS_OF
+gasserian ganglion in 19 patients with tic douloureux--##--PROCESS_OF
+rectal bleeding, and thrombocytopenia.--##--PROCESS_OF
+chronic administration of tiapamil prevents hemodynamic alterations accompanying development--##--PROCESS_OF
+with the shortest pulses (0.02 ms), the sympathetic innervation--##--PROCESS_OF
+is needed only in patients with severe degenerative--##--PROCESS_OF
+platelet lipid biosynthesis in female rats : dose-response--##--PROCESS_OF
+aortic valve replacement is needed only in patients--##--PROCESS_OF
+two hundred eleven patients with adenocarcinoma of the--##--PROCESS_OF
+air despite an increased responsiveness to methacholine inhalation.--##--PROCESS_OF
+in normotensive and hypertensive patients with acromegaly.--##--PROCESS_OF
+immunodeficiency with hyper-igm, and in hyper-ige syndrome.--##--PROCESS_OF
+(sti) have been measured in three patients with--##--PROCESS_OF
+with 322(32) pmol.g-1 wet wt (p less than--##--PROCESS_OF
+trimeprazine orally for the control of pruritus in--##--PROCESS_OF
+[allergologic-immunochemical study of tree and bush pollen. ii--study--##--PROCESS_OF
+procedures and to reduce the prevalence of chlamydial infection--##--PROCESS_OF
+with posterior fossa tumors treated with radiation and chemotherapy--##--PROCESS_OF
+pruritus in children .--##--PROCESS_OF
+a pneumopericardium (ppc) while receiving intermittent positive-pressure ventilation,--##--PROCESS_OF
+in children : prospective study of diagnosis and--##--PROCESS_OF
+clot lysis, suggesting local production of fibrin degradation products--##--PROCESS_OF
+was 505(41) compared with 322(32) pmol.g-1 wet wt--##--PROCESS_OF
+pregnancies complicated by essential hypertension or severe pre-eclampsia--##--PROCESS_OF
+remained under -3.0 d, and 17.5% had myopia--##--PROCESS_OF
+myocardial 5-ht1-like and 5-ht2 receptors subserve tachycardia in--##--PROCESS_OF
+13-cis-retinoic acid (13-cis-ra) on 1,2-dimethylhydrazine (dmh)-induced colon cancer--##--PROCESS_OF
+in chronic suppurative otitis and coclear neuritis patients--##--PROCESS_OF
+midazolam and oxazepam in the treatment of insomnia--##--PROCESS_OF
+the humoral and cellular immunity in immunized animals--##--PROCESS_OF
+fibroepithelial tumor of pinkus, and 1 with basal cell nevus syndrome--##--PROCESS_OF
+0.5% vanadate lowers intraocular pressure in monkey and--##--PROCESS_OF
+5-ht2 receptors subserve tachycardia in the cat and--##--PROCESS_OF
+ imperforate anus  in 700,000 consecutive liveborn  infants .--##--PROCESS_OF
+in patients with ataxia-telangiectasia , in immunodeficiency with hyper-igm, and in hyper-ige syndrome.--##--PROCESS_OF
+ventricular angiograms demonstrated an increase in right ventricular trabeculations--##--PROCESS_OF
+early ambulation of postoperative  cataract   patients .--##--PROCESS_OF
+in patients with duodenal ulcer disease in symptomatic--##--PROCESS_OF
+in undernourished persons with moderate or severe disease--##--PROCESS_OF
+[pulmonary tuberculosis in persons with mitral stenosis ;--##--PROCESS_OF
+dry air despite an increased responsiveness to methacholine inhalation.--##--PROCESS_OF
+dopamine is both diuretic and saluretic in the--##--PROCESS_OF
+and some children with fixation of the lymph node--##--PROCESS_OF
+[tolerance to physical exertion of patients with lymphoproliferative disorders--##--PROCESS_OF
+dithizone administration were immediately recovered by zinc-acetate application--##--USES
+patients on long-term digoxin therapy .--##--USES
+27 patients undergoing cpb surgery for coronary artery disease--##--USES
+of capillary fragility; ascorbic acid and rutin therapy--##--USES
+receptor blockade (sar1, ile8-aii) produced a mean arterial pressure--##--USES
+in three ways: shock induced by bleeding; intravenous injection--##--USES
+by bleeding; intravenous injection of oleic acid ;--##--USES
+corticosteroid treatment and prognosis in pulmonary--##--USES
+on the myocardium, we treated 31 patients with severe--##--USES
+both drug regimens were well-tolerated.--##--USES
+of the conformational changes in carp muscle--##--USES
+rinses from volunteers using the placebo preparation (p--##--USES
+chemotherapy with mustine , vinblastine, procarbazine, and prednisone--##--USES
+in burn shock in the guinea pig.--##--USES
+gli, and antibodies derived from one particular animal--##--USES
+ corticosteroid   treatment  and prognosis in pulmonary eosinophilia.--##--USES
+in 9 patients following phlebography embolisation of a--##--USES
+experimental chronic osteomyelitis due to staphylococcus aureus.--##--USES
+isoproterenol potentiation in tracheal muscle does not provide--##--USES
+(1100 mg/m2) and continued treatment with heparin and warfarin--##--USES
+ketanserin and tetrabenazine treatment on monoamine and metabolite--##--USES
+, vinblastine, procarbazine, and prednisone (mvpp).--##--USES
+large disposable circular trephines have been developed specially--##--USES
+simon's neutral carrier eth 227 and eth 1001,--##--USES
+particularly strongly with gli, and antibodies derived from--##--USES
+definition of the term therapeutic efficacy of neuroleptic and--##--USES
+both  drug   regimens  were well-tolerated.--##--USES
+in plasma by capillary gas chromatography with nitrogen-selective detection--##--USES
+na+- and ca2+-selective microelectrodes were made with simon's neutral carrier--##--USES
+(0.5 mg/kg, i.v.) significantly reduced the rise in plasma--##--USES
+in carp muscle calcium binding parvalbumin.--##--USES
+less than 4.4% of the range of pressures--##--USES
+adverse reaction following levodopa plus benserazide treatment .--##--USES
+determination of the partial benzodiazepine receptor agonist ro 16-6028--##--USES
+[further experiences with aureomycin therapy of acute rheumatism--##--USES
+developed specially for circular excision biopsy of the--##--USES
+a new apparatus for measuring plasma viscosity].--##--USES
+gemeprost vaginal pessaries for inducing third-trimester intrauterine deaths.--##--USES
+melatonin, pineal n-acetylserotonin, and serum melatonin were investigated.--##--USES
+estimate of the predicted pressure was less than 4.4% of--##--USES
+17 alpha-ohp to t induced by estrogen treatment is--##--USES
+following levodopa plus benserazide treatment .--##--USES
+of epithelial cells of human stomach revealed intense yellow--##--USES
+hours followed by iv administration of cyclophosphamide (1100 mg/m2)--##--USES
+and ammonium sulphate fractionation .--##--USES
+ascorbic acid and rutin therapy ].--##--USES
+paraformaldehyde (pf) treatment of epithelial cells of human stomach--##--USES
+[further experiences with aureomycin therapy of acute rheumatism in--##--USES
+human myocardium and plasma digoxin concentration in patients--##--USES
+of 27 hand rinses from volunteers using iodine--##--USES
+relaxation and its isoproterenol potentiation in tracheal muscle--##--USES
+rise in plasma gh induced by ghrh (2 micrograms/kg,--##--USES
+surfaces treated with citric acid , elastase, hyaluronidase,--##--USES
+performed to compare a lyophilised heparin syringe with--##--USES
+plasma viscosimeter . a new apparatus for measuring--##--USES
+drugs, the indications for treatment with neuroleptic and antidepressant--##--USES
+ gemeprost   vaginal pessaries  for inducing third-trimester intrauterine deaths.--##--USES
+not with oestradiol benzoate, increased the number of old--##--USES
+including smaller collaterals was performed using ethibloc--##--USES
+not with oestradiol benzoate, increased the number of--##--USES
+effects of alloxan treatment on the levels of--##--USES
+of root dentin surfaces treated with citric acid ,--##--USES
+t induced by estrogen treatment is restored to normal--##--USES
+in this study, 27 patients undergoing cpb surgery--##--USES
+ineffectiveness of heparin treatment in burn shock in--##--USES
+homogenate by acid precipitation and ammonium sulphate fractionation--##--USES
+of ketanserin and tetrabenazine treatment on monoamine and metabolite--##--USES
+of long-term positive inotropic stimulation on the myocardium, we--##--USES
+abolished eeg by dithizone administration were immediately recovered by--##--USES
+statistically similar to that elicited by captopril in combination--##--USES
+clindamycin treatment of experimental chronic osteomyelitis--##--USES
+a lyophilised heparin syringe with a liquid heparin--##--USES
+chronic subdural hematoma were treated by burr hole with--##--TREATS
+findings provide a favorable outcome of [  anti-hyaluronidase treatment  ] on {  acute vocal fold wound--##--TREATS
+a recently developed immunosuppressant drug, the  authors  treated eight  patients--##--TREATS
+(2) sc behaviors moderate the effect of mindful behaviors--##--TREATS
+safety and promise in reducing { anxiety }, improving--##--TREATS
+f treated colorectal cancer--##--TREATS
+were noted in mice treated with hpd .--##--TREATS
+that [ mindfulness-based interventions ] delivered through text messaging--##--TREATS
+compared with the ngf group and the model group, [  mechanical vibration treatment  ] can effectively accelerate repair of {  injured brachial plexus  }, slow--##--TREATS
+increased serotonin and dopamine levels; higher fetal birth weight--##--TREATS
+puva and adjunctive topical therapy in the management of--##--TREATS
+for [ ea ] induced relief of { neuropathic--##--TREATS
+[morbidity and mortality of total abdominal hysterectomy and--##--TREATS
+the progress of insulitis in  nod mice , but the immunosuppressive mechanisms differ from each other; therefore, combination therapy with these suppressants--##--TREATS
+immunosuppressant drug, the authors treated eight patients with noninfectious--##--TREATS
+survival with long-term captopril therapy in rats with myocardial--##--TREATS
+although several issues and biases (e.g., blinding issues, tests without correction for multiple comparisons, placebo effects and exploratory analyses, practice effects) hinder us to conclude that nibs technique improve cognition in patients with depression.--##--TREATS
+combined antibiotic-cortisone therapy in infectious asthma ;--##--TREATS
+almitrine bismesylate  and oxygen therapy in hypoxic  cor pulmonale .--##--TREATS
+{ plp intensity } and phantom sensations and--##--TREATS
+moderate the effect of mindful behaviors on mood--##--TREATS
+therapy of allergic with air--##--TREATS
+[the treatment of tuberculosis with tuberculostatic--##--TREATS
+drainage with slow decompression (43 cases).--##--TREATS
+and hydrogen disulfide  baths  in the complex treatment of  lumbosacral radiculitis ].--##--TREATS
+aminomethane (tham) in experimental hemorrhagic shock .--##--TREATS
+cryotherapy did not differ significantly from [  epifoam therapy  ] (hydrocortisone-pramoxine) in its effects--##--TREATS
+women in [ group therapy ] can significantly improve--##--TREATS
+and the other side protected in the same cat--##--TREATS
+thyroxine binding globulin during therapy with l-asparaginase, vincristine and--##--TREATS
+characterized by { chronic widespread pain }, unrefreshing--##--TREATS
+significantly from [ epifoam therapy ] (hydrocortisone-pramoxine) in its--##--TREATS
+conclusion: patients diagnosed with oa in a socioeconomically--##--TREATS
+baths in the complex treatment of lumbosacral radiculitis ].--##--TREATS
+treatment of tuberculosis with tuberc--##--TREATS
+survival and response to treatment of patients with small--##--TREATS
+therapy of cb with hfns--##--TREATS
+the { ibs } symptom severity scale score--##--TREATS
+as repeated transcranial magnetic stimulation (rtms) and transcranial direct--##--TREATS
+rates and improvements at treatment endpoint, for early insomnia,--##--TREATS
+infants  of the apnea syndrome-group, which had no therapy, had increased i to v--##--TREATS
+common duct exploration from january 1982 through december 1986--##--TREATS
+natural products ] that can remedy the comorbidity of {--##--TREATS
+symptom remission faster than cbt-sad.--##--TREATS
+hsp90 in the spinal cord may be a co-stimulatory molecule--##--TREATS
+outcome of [ anti-hyaluronidase treatment ] on { acute--##--TREATS
+the [ cbt ] arm and a 15%--##--TREATS
+what is the role of surgery in aids?].--##--TREATS
+curettage treated bone--##--TREATS
+of estramustine phosphate (estracyt) in patients with metastatic--##--TREATS
+according to [  mckenzie method  ], has been shown to be effective in the treatment of {  lbp  }.--##--TREATS
+b and 11 c exhibited an analgesic activity--##--TREATS
+phytobezoars often follow gastric surgery for peptic ulcer--##--TREATS
+on mckenzie back exercises and oral viscosupplementation with--##--TREATS
+low-carbohydrate formulations effective in treating medically refractory epilepsy, and--##--TREATS
+has been used in treatment studies for { psychiatric--##--TREATS
+[ music therapy ] inhibits { morphine-seeking--##--TREATS
+therapy of open with depression--##--TREATS
+therapy of morphine-seeking behavior with ga--##--TREATS
+of the larynx was sprayed before intubation and--##--TREATS
+of tumor growth is associated with a reduction in--##--TREATS
+with oa in a socioeconomically disadvantaged community demonstrated--##--TREATS
+[  transcranial magnetic stimulation  ] has been used in treatment studies for {  psychiatric disorders  }, primarily unipolar--##--TREATS
+group, [ mechanical vibration treatment ] can effectively accelerate--##--TREATS
+level, the six infants treated with aminophylline were within--##--TREATS
+} and phantom sensations and high user ratings.--##--TREATS
+adapted internet-delivered cognitive behavioural therapy ] (icbt) intervention for--##--TREATS
+cognitive behavioural therapy ([ cbt ]) is--##--TREATS
+one patient needed rethoracotomy after debridement for continuous--##--TREATS
+to sg for reducing { depression } and--##--TREATS
+alternative to [  g. biloba  ] in the treatment of {  atherosclerosis-related vertigo  }.--##--TREATS
+[ aromatherapy ] blend of thyme, orange, clove--##--TREATS
+and transcranial direct current stimulation ([ tdcs ]), have--##--TREATS
+or c.a.r. and daunorubicine) and  maintenance therapy  (by c.a.r. or methylgag) in  acute myeloid leukaemia .--##--TREATS
+who have been previously treated with hormones and/or chemotherapy,--##--TREATS
+in patients with chronic pancreatitis: relationship to glucose intolerance--##--TREATS
+of total abdominal hysterectomy and remote results in--##--TREATS
+morphine to reverse reserpine- induced hypothermia in adrenalectomized mice--##--TREATS
+survival with long-term captopril  therapy  in rats with  myocardial infarction  and heart--##--TREATS
+sulphonamides in the treatment of caecal coccidiosis of--##--TREATS
+mm-fat ] has a positive effect on the--##--TREATS
+the bacteriological status of the pre-operative urine, removed--##--TREATS
+five per cent (five cases) of all vaginal deliveries--##--TREATS
+overdenture treatment of an adult cleft--##--TREATS
+advanced colorectal cancer were treated with folinic acid (200--##--TREATS
+alternative exercise for patients with { hypertension }.--##--TREATS
+depression }, and for preventing loss of bone mineral--##--TREATS
+phenylbutazone; moreover 10-substituted compounds 11 a, 11 b--##--TREATS
+proposes a simple but completely novel [ ect--##--TREATS
+benign neoplasms of bone treated by curettage .--##--TREATS
+to arginine infusion in patients with chronic pancreatitis:--##--TREATS
+an anterior transperitoneal incision was used to remove--##--TREATS
+}, and for preventing loss of bone mineral density--##--TREATS
+superior to sg for reducing { depression } and--##--TREATS
+the impact of such treatment upon susceptible, moderately resistant--##--TREATS
+through text messaging are effective in improving distress--##--TREATS
+and spinal surgery, pain medication history, position and size--##--TREATS
+conclusion: [  clay-based group art therapy  ] can contribute toward decreasing the sense of loneliness and {  hopelessness--##--TREATS
+promising tool for cognitive enhancement in { mdd },--##--TREATS
+puva and adjunctive topical  therapy  in the management of  psoriasis .--##--TREATS
+for tumour on the bronchial stump after resection--##--TREATS
+of the pre-operative urine, removed calcium and the--##--TREATS
+six months after the end of [  yoga therapy  ], symptoms of anxiety, {  depression  }, and fatigue--##--TREATS
+almitrine bismesylate and oxygen therapy in hypoxic cor pulmonale--##--TREATS
+]) are high-fat, low-carbohydrate formulations effective in treating medically refractory epilepsy, and recently we demonstrated {  lowered sensitivity to thermal pain  } in rats--##--TREATS
+severity scale score was reduced by both [ tea--##--TREATS
+defects in state iii.--no peripartum loss of cardiac--##--TREATS
+transfusion  versus assisted ventilation for drug-induced  respiratory depression .--##--TREATS
+fetal birth weight and reduced risk of preterm delivery.--##--TREATS
+a number of  antimicrobial agents  has an impact on the selection of appropriate therapy for  infections  caused by these--##--TREATS
+rethoracotomy after debridement for continuous bleeding .--##--TREATS
+[ prenatal care  for mother and  child ].--##--TREATS
+naprapathy attenuates { neuropathic pain }--##--TREATS
+an intraosseous infusion line for the administration of muscle relaxants and anesthetic agents--##--TREATS
+gastric surgery for peptic ulcer disease .--##--TREATS
+[ aromatherapy ] blend of thyme,--##--TREATS
+the selection of appropriate therapy for infections caused by--##--TREATS
+therapy of 42 - μ with pain--##--TREATS
+end of [ yoga therapy ], symptoms of anxiety,--##--TREATS
+[ biofield therapies ] show safety and--##--TREATS
+biloba ] in the treatment of { atherosclerosis-related vertigo--##--TREATS
+and daunorubicine) and maintenance therapy (by c.a.r. or methylgag)--##--TREATS
+in chronically catheterized  patients  we observed the impact of such treatment upon susceptible, moderately resistant and highly--##--TREATS
+effect of adjuvant  central iv hyperalimentation  on the survival and response to treatment of  patients  with small cell--##--TREATS
+hypercellularity were noted in mice treated with hpd--##--TREATS
+conclusions [ chiropractic therapy ] attenuated { allergic--##--TREATS
+underwent cholecystectomy and common duct exploration from january 1982--##--TREATS
+exchange transfusion versus assisted ventilation for drug-induced respiratory--##--TREATS
+sulphonamides  in the treatment of caecal  coccidiosis  of chickens.--##--TREATS
+mm-fat ] has a positive effect--##--TREATS
+combined antibiotic-cortisone therapy  in infectious  asthma ; the rationale--##--TREATS
+evaluation of tris (hydroxymethyl) aminomethane (tham) in experimental--##--TREATS
+more effective in the prevention of type 1 diabetes--##--TREATS
+chronic inflammation ({ inflammaging }), which is observed--##--TREATS
+be effective in the treatment of { lbp }.--##--TREATS
+with trends for a reduction in { pain },--##--TREATS
+] that can remedy the comorbidity of {--##--TREATS
+role of surgery in aids?].--##--TREATS
+discussion: engaging pregnant women in [  group therapy  ] can significantly improve worry and {  depression--##--TREATS
+and thyroxine binding globulin during therapy with l-asparaginase,  vincristine  and prednisolone--##--TREATS
+overdenture  treatment of an adult  cleft palate  patient.--##--TREATS
+from 20 kidneys in 18 patients (2 bilateral).--##--TREATS
+and a 15% (6.5-5.5) reduction in the uc arm--##--TREATS
+and either partial resection of bladder or bladder--##--TREATS
+[ clay-based group art therapy ] can contribute toward--##--TREATS
+as a possible operative treatment in patients .--##--TREATS
+(estracyt) in patients with metastatic melanoma .--##--TREATS
+effective and safe alternative exercise for patients with--##--TREATS
+five patients were treated by partial resection of--##--TREATS
+results: variables identified that may help predict [ pnfs ] success in patients with { back pain } include patient and pain characteristics (age, time since onset of pain--##--TREATS
+obstetrics --a review of 117 cases.--##--TREATS
+value of radiotherapy for tumour on the bronchial stump--##--TREATS
+exercises and oral viscosupplementation with fortigel®, vitamin c,--##--TREATS
+neuropathic pain } after [ brachial plexus injury--##--TREATS
+chronic widespread pain }, unrefreshing sleep and mental/physical--##--TREATS
+these results confirm  synovectomy  as a possible operative treatment in  patients .--##--TREATS
+proceedings: inability of antidepressants and morphine to reverse--##--TREATS
+infusion line for the administration of muscle relaxants and--##--TREATS
+inflammaging }), which is observed in the elderly,--##--TREATS
+strategy that aims to rapidly relieve { depressive--##--TREATS
+emergency hysterectomy in obstetrics --a review of 117--##--TREATS
+homeopathic remedies ] used by homeopathic practitioners for--##--DOES_NOT_TREAT
+there were no significant effects of diet or--##--DOES_NOT_TREAT
+used by homeopathic practitioners for cancer show no--##--DOES_NOT_TREAT
+effects of diet or--##--DOES_NOT_TREAT
+and { cd16 } on neutrophil surface was--##--DOES_NOT_TREAT
+neutrophil surface was not affected by [ lllt. ]--##--DOES_NOT_TREAT
+, inevitable abortion and pregnancies complicated by diabetes--##--COMPLICATES
+of meningitis and epidural abscess complicated by primary--##--COMPLICATES
+epidural abscess complicated by primary squamous cell carcinoma--##--COMPLICATES
+ urinary ascites  complicating  spina bifida .--##--COMPLICATES
+acute  haemolytic anaemia  complicating  infectious mononucleosis .--##--COMPLICATES
+human body may protect rather than worsen in--##--COMPLICATES
+17beta-hydroxysteroid: nad (p)-oxydoreductase plasma enzyme-activity levels in threatened--##--COMPLICATES
+ hodgkin's disease  complicated by  tuberculosis .--##--COMPLICATES
+ sickle cell anemia  complicated by  infectious mononucleosis .--##--COMPLICATES
+in human body may protect rather than worsen in--##--COMPLICATES
+ pulmonary sarcoidosis  complicated by cryptococcosis and  coccidioidomycosis .--##--COMPLICATES
+studies indicate that an increase in vascular closing pressure--##--COMPLICATES
+complicated by posttraumatic stress disorder and discuss the--##--COMPLICATES
+complicated by diffuse pulmonary haemorrhage .--##--COMPLICATES
+in pap and apparent increase in pvr complicating pulmonary--##--COMPLICATES
+implications of this comorbidity for theory, research, and--##--COMPLICATES
+progressive systemic sclerosis complicated by diffuse pulmonary haemorrhage--##--COMPLICATES
+prior laser photocoagulation, 83% were clear of vitreous hemorrhage--##--PRECEDES
+in the case of ventricular conduction disturbances and--##--PRECEDES
+of perioperative prophylaxis of infections after surgery of--##--PRECEDES
+hand, acid output from the telemetering after stimulation--##--PRECEDES
+laminectomy in the treatment of advanced cases of--##--PRECEDES
+methods in recurrent ulcer after vagotomy and do--##--PRECEDES
+degrees c, 5 min) was studied.--##--PRECEDES
+from the telemetering after stimulation of aoc-tetragastrin (4 gamma/kg,--##--PRECEDES
+after laminectomy in the treatment of advanced cases of--##--PRECEDES
+twice as many occluded infarct-related arteries opened after--##--PRECEDES
+, and recently after congenital cytomegalovirus infection.--##--PRECEDES
+uptake and phosphorylation of exogenously supplied thymidine are--##--PRECEDES
+heat shock (50 degrees c, 5 min) was--##--PRECEDES
+exogenously supplied thymidine are stimulated in strongylocentrotus purpuratus eggs--##--PRECEDES
+occluded infarct-related arteries opened after rt-pa compared with--##--PRECEDES
+estrogen-receptor concentration measured in vitro after excision (r--##--PRECEDES
+diabetes mellitus and thyroid disorders have previously been--##--PRECEDES
+some aspects of perioperative prophylaxis of infections after surgery--##--PRECEDES
+be related to changes in--##--PRECEDES
+[ vitreous hemorrhage after intracranial hemorrhage : terson's--##--PRECEDES
+and the tumor estrogen-receptor concentration measured in vitro--##--PRECEDES
+after intracranial hemorrhage : terson's syndrome].--##--PRECEDES
+preference to resection methods in recurrent ulcer after--##--PRECEDES
+in eyes without prior laser photocoagulation, 83% were--##--PRECEDES
+of ventricular conduction disturbances and disturbances of rhythm and rate--##--PRECEDES
+to changes in cell metabolism as reflected by--##--PRECEDES
+anisotropy } (qa) in the right dorsal pathways--##--CAUSES
+therapy ] group { increased quantitative anisotropy } (qa)--##--CAUSES
+endogenous { spm }s production, which might be one--##--AFFECTS
+to, and without interfering with,--##--AFFECTS
+such as post-traumatic stress disorder, anxiety and {--##--AFFECTS
+in addition, [ music therapy ] probably results in--##--AFFECTS
+exposure to opiates may affect autonomic function ing of--##--AFFECTS
+utero exposure to  opiates  may affect  autonomic function ing of the--##--AFFECTS
+chiropractic manipulation ] helped enhance endogenous { spm }s--##--AFFECTS
+} in blood plasma decreased after serial shock wave--##--AFFECTS
+enhances { ngf } concentrations, balance and the--##--AFFECTS
+{ protein carbonyls } in blood plasma decreased--##--AFFECTS
+results in the [ drug oil moxibustion group ]--##--AFFECTS
+stress disorder, anxiety and { depression } and--##--AFFECTS
+results in a large reduction in total { autism--##--AFFECTS
+with [ dance movement therapy ]: a case report.--##--AFFECTS
+lower than those before treatment (all p<0.05), with better--##--AFFECTS
+addition to, and without interfering with, conventional medicine--##--AFFECTS
+clinical implications: [ mindful moms ] appears to be a feasible--##--AFFECTS
+overcoming { depression } with [ dance movement--##--AFFECTS
+and acceptable approach to enhancing motivation to self-manage {--##--AFFECTS
+hydrotherapy ] and massage enhances { ngf } concentrations,--##--AFFECTS
+[ endocarditis  in congenital  heart abnormality ].--##--COEXISTS_WITH
+flash photolysis of reduced, co-complexed samples of cytochrome c oxidase--##--COEXISTS_WITH
+management of neoplastic conditions involving the larynx or--##--COEXISTS_WITH
+ arrhythmias  during acute  myocardial hypoxia .--##--COEXISTS_WITH
+histocompatibility antigen can be produced by association of alloantigens--##--COEXISTS_WITH
+of either insulin, propranolol , or isoproterenol: concentrations--##--COEXISTS_WITH
+tumors with myxoid changes, especially in amelanotic metastases--##--COEXISTS_WITH
+deposits, p-component is also a normal matrix glycoprotein--##--COEXISTS_WITH
+isosorbide dinitrate versus nitroglycerin on elevated pulmonary arterial wedge pressure--##--COEXISTS_WITH
+in variously localized lesions of the central nervous system].--##--COEXISTS_WITH
+affects premature/compromised infants, is characterized by ischemic necrosis--##--COEXISTS_WITH
+abnormalities which may be associated with cerebral emboli .--##--COEXISTS_WITH
+or the laryngopharynx.--##--COEXISTS_WITH
+ventricular dysrhythmias associated with congenital left ventricular--##--COEXISTS_WITH
+ed in synergistic bone-resorptive responses (1.5 to 10--##--COEXISTS_WITH
+indicate that hemorrhage alone caused an early vasoconstriction in--##--COEXISTS_WITH
+[ splenic function  in  hodgkin's disease ].--##--COEXISTS_WITH
+composition being characterized by high contents of glutamic--##--COEXISTS_WITH
+differs in several respects from the neurofibrillary tangles--##--COEXISTS_WITH
+[ enteric hyperoxaluria . i. intestinal oxalate absorption--##--COEXISTS_WITH
+characterized by high contents of--##--COEXISTS_WITH
+ala ctose, mannose , and rhamnose as cell wall sugars--##--COEXISTS_WITH
+and if appropriate antimicrobial therapy is instituted.--##--COEXISTS_WITH
+[bladder function disorders in variously localized lesions of--##--COEXISTS_WITH
+during heat shock of saccharomyces cerevisiae.--##--COEXISTS_WITH
+and nine had abnormalities which may be associated with  cerebral emboli .--##--COEXISTS_WITH
+while vasopressin during hemorrhage induced an early and sustained--##--COEXISTS_WITH
+highly lethal disease that affects premature/compromised infants, is characterized--##--COEXISTS_WITH
+tolerance to allogeneic  histocompatibility antigen  can be produced by association of  alloantigens  on a tolerogenic--##--COEXISTS_WITH
+g ala ctose, glucose, or mannose as cell wall--##--COEXISTS_WITH
+alterations of transcription during heat shock of saccharomyces--##--COEXISTS_WITH
+lt resu lt ed in synergistic bone-resorptive responses--##--COEXISTS_WITH
+this neurofibrillary neuronal degeneration resembles that found in--##--COEXISTS_WITH
+suggest that a favorable therapeutic outcome may be anticipated--##--COEXISTS_WITH
+[pathogenesis of  internal hydrocephalus  during  meningeal tuberculosis ].--##--COEXISTS_WITH
+simulate other malignant tumors with myxoid changes, especially--##--COEXISTS_WITH
+in chronic autonomic insufficiency .--##--COEXISTS_WITH
+constituent of amyloid deposits, p-component is also a--##--COEXISTS_WITH
+effect of intravenous isosorbide dinitrate versus nitroglycerin on--##--COEXISTS_WITH
+propranolol , or isoproterenol: concentrations of cyclic amp,--##--COEXISTS_WITH
+. i. intestinal oxalate absorption in gastrointestinal diseases--##--COEXISTS_WITH
+ventricular dysrhythmias  associated with  congenital left ventricular aneurysms--##--COEXISTS_WITH
+isotachophoretic determination of--##--COEXISTS_WITH
+isotachophoretic determination of adriamycin and adriamycin ol in--##--COEXISTS_WITH
+flash photolysis of reduced, co-complexed samples of cytochrome--##--COEXISTS_WITH
+blood pressure variations in chronic autonomic insufficiency--##--COEXISTS_WITH
+described by virchow in 1859, or as a--##--MANIFESTATION_OF
+to possible pathogenetic mechanisms and current models of--##--MANIFESTATION_OF
+in 1859, or as a circumscribed tumour attached--##--MANIFESTATION_OF
+of biliary stasis, while it is clearly demonstrated--##--MANIFESTATION_OF
+of domestic cats and suggests that expression--##--MANIFESTATION_OF
+may be the commonest cause of aorto-oesophageal fistula (aof),--##--MANIFESTATION_OF
+of the body as means of expression, more--##--MANIFESTATION_OF
+and suggests that expression of certain functions of--##--MANIFESTATION_OF
+mechanism of injury , associated symptoms , and theories--##--MANIFESTATION_OF
+this syndrome is analyzed with regard to possible--##--MANIFESTATION_OF
+biliary obstruction is earlier suggested by elevated serum enzymes--##--MANIFESTATION_OF
+to explain their findings, they make suppositions: the use of the body as means of expression, more important among the africans, is related to the tendency to somatize; the belief--##--MANIFESTATION_OF
+cause of aorto-oesophageal fistula (aof), but this entity--##--MANIFESTATION_OF
+of carotid artery injury associated with blunt craniocervical trauma.--##--MANIFESTATION_OF
+implants revealed distinctive cytoplasmic eosinophilia and apical granules.--##--DIAGNOSES
+transhepatic percutaneous cholangiography continues to be a significant--##--DIAGNOSES
+the clinical application of computed x ray tomography--##--DIAGNOSES
+the rectal mucosa for diagnosis of arteritis in--##--DIAGNOSES
+scintigraphic detection of pulmonary embolism in patients with--##--DIAGNOSES
+for the diagnosis of--##--DIAGNOSES
+computerized transaxial tomography and radionuclide cisternography in folic acid--##--DIAGNOSES
+[significance of contrast visualization of the anterior choroidal artery--##--DIAGNOSES
+and arteriography in the detection of pancreatic tumours--##--DIAGNOSES
+the sensitivities of ultrasound, computed tomography and arteriography--##--DIAGNOSES
+experience in the diagnosis of glomerulonephritis using combined light microscopical,--##--DIAGNOSES
+suction biopsy of the rectal mucosa for diagnosis--##--DIAGNOSES
+of computed x ray tomography in tumour identification.--##--DIAGNOSES
+venography in synovial rupture of the knee.--##--DIAGNOSES
+by videofluorography barium swallow were prolonged oral transit--##--DIAGNOSES
+following treatment and for clarifying atypical late changes--##--DIAGNOSES
+simultaneous arthrography and venography in synovial rupture of--##--DIAGNOSES
+diagnosis of glomerulonephritis using combined light microscopical, ultrastructural and immunofluorescence techniques--##--DIAGNOSES
+[ angiographic  findings in hypophyseal  adenoma ].--##--DIAGNOSES
+the basis of biopsy findings and routine radiographs--##--DIAGNOSES
+cholestatic features (group 1) and of 30 biopsies--##--DIAGNOSES
+inflammatory process, identification of associated illness and material obtention--##--DIAGNOSES
+ magnetic resonance imaging  in pediatric  vascular disease .--##--DIAGNOSES
+the activation of oncogenes in hematological malignancies and--##--DIAGNOSES
+were prolonged oral transit and--##--DIAGNOSES
+the nature of any large lesion suspected of--##--DIAGNOSES
+incisional biopsy of the nature of any large--##--DIAGNOSES
+are negative, for following treatment and for clarifying atypical--##--DIAGNOSES
+biopsy findings and routine radiographs of involved areas.--##--DIAGNOSES
+neuropsychological correlates of computerized transaxial tomography and radionuclide cisternography--##--DIAGNOSES
+pulmonary embolism in patients with obstructive pulmonary disease.--##--DIAGNOSES
+structural change accompanying the activation of oncogenes in hematological--##--DIAGNOSES
+in the diagnosis--##--DIAGNOSES
+tumor and the implants revealed distinctive cytoplasmic eosinophilia--##--DIAGNOSES
+and the presence of associated disease in ddc and--##--DIAGNOSES
+25 liver biopsies from 12 patients with chronic--##--DIAGNOSES
+a site of inflammation, induces synthesis of il-1 that--##--STIMULATES
+[  bioresonance therapy  ] increased the content of thiol groups and normalized--##--STIMULATES
+alpha-phorbol 12, 13, didecanoate, a weak activator of pkc, had a weak suppressive effect on  camp -production stimulated by--##--STIMULATES
+that 1) fsh is stimulating the attachment of sertoli--##--STIMULATES
+benzyl alcohol or benzaldehyde induces benzyl alcohol dehydrogenase and--##--STIMULATES
+mechanism of human  plasminogen  activation by  streptokinase  and human plasmin.--##--STIMULATES
+[  moxa smoke  ] dose-dependently induced internucleosomal dna fragmentation, activation of caspases 3, 8 and--##--STIMULATES
+nmda receptors are normally activated by glutamate and/or aspartate--##--STIMULATES
+[changes in the tyrosine-alpha ketoglutaric transaminase (tkt) activity--##--STIMULATES
+data suggest that  tgf-beta , after release at a site of inflammation, induces synthesis of  il-1  that participates in--##--STIMULATES
+diazepam  injection, mean  gaba  increases after  diazepam  were significantly different--##--STIMULATES
+electrophoretic mobility in sds/polyacrylamide gels, isoelectric point,  proteolytic  activation process with  trypsin  and susceptibility to--##--STIMULATES
+benzyl alcohol  or benzaldehyde induces benzyl alcohol  dehydrogenase  and the heat-labile--##--STIMULATES
+1,25- dihydroxyvitamin d3 increases type 1 interleukin-1 receptor--##--STIMULATES
+transforming growth factor-beta stimulates the expression of endothelin--##--STIMULATES
+we conclude that induction of tyrosine aminotransferase by--##--STIMULATES
+condition in lungs, significantly increased systemic ratio of ifn-γ/{--##--STIMULATES
+u-pa-dependent cell surface proteolysis and therefore enhance  egf  activities that require--##--STIMULATES
+activation of cyanide with l - kynurenine - 3 - hydroxylase--##--STIMULATES
+(tkt) activity of liver induced by numerous drugs ].--##--STIMULATES
+is probably a cyp2e inducer in rat liver, whereas  chp  appears to be--##--STIMULATES
+egf  appears to increase sucrase and  maltase  activities--##--STIMULATES
+activity of testes and increased the activity of hexokinase--##--STIMULATES
+[ bioresonance therapy ] increased the content of thiol--##--STIMULATES
+transforming growth factor-beta  stimulates the expression of  endothelin  mrna by vascular--##--STIMULATES
+the root  fnr  mrna was induced transiently by the addition of  nitrate , but not--##--STIMULATES
+root fnr mrna was induced transiently by the addition--##--STIMULATES
+induced internucleosomal dna fragmentation, activation of caspases 3, 8--##--STIMULATES
+gels, isoelectric point, proteolytic activation process with trypsin and--##--STIMULATES
+effect on camp -production stimulated by isoproterenol .--##--STIMULATES
+n-methyl-d, l-aspartate stimulates growth hormone but not--##--STIMULATES
+ estrogen -induced  16-hydroxysteroid dehydrogenase  activity in rat kidney.--##--STIMULATES
+[on the question of activation by cyanide of l-kynurenine-3-hydroxylase--##--STIMULATES
+n-methyl-d,  l-aspartate  stimulates  growth hormone  but not luteinizing--##--STIMULATES
+ea ] intervention or inhibitor injection significantly attenuated hyperalgesia,--##--STIMULATES
+glutamate and/or aspartate which represent the principal neurotransmitters--##--STIMULATES
+enzyme activity of testes and increased the activity of  hexokinase  from the low--##--STIMULATES
+##rogen induced i - 131--##--STIMULATES
+diazepam injection, mean gaba increases after diazepam were significantly--##--STIMULATES
+growth factor-2 } were significantly higher in the--##--STIMULATES
+the ability of azone (1-dodecylazacylcoheptan-2-one), a recently developed--##--STIMULATES
+or inhibitor injection significantly attenuated hyperalgesia, reversed the incr--##--STIMULATES
+mechanism of human plasminogen activation by streptokinase and human--##--STIMULATES
+to be a mixed inducer of cytochrome p450 isoenzymes--##--STIMULATES
+stimulation of synaptosomal gamma-aminobutyric acid--##--STIMULATES
+stimulation of synap with gamma - aminobutyric acid--##--STIMULATES
+rat diaphragm. v. changes induced with synthetic estrogens ].--##--STIMULATES
+, 2) fsh is promoting active aggregation of sertoli--##--STIMULATES
+increases type 1 interleukin-1 receptor expression in a--##--STIMULATES
+estrogen -induced  16-hydroxysteroid dehydrogenase  activity in rat--##--STIMULATES
+in jejunum and inflammatory condition in lungs, significantly increased systemic ratio of ifn-γ/{  il-4--##--STIMULATES
+induction of tyrosine aminotransferase with g--##--STIMULATES
+azone (1-dodecylazacylcoheptan-2-one), a recently developed penetration enhancer, to--##--STIMULATES
+surface proteolysis and therefore enhance egf activities that require--##--STIMULATES
+egf appears to increase sucrase and maltase activities--##--STIMULATES
+results: the expression levels of angiopoietin-2 and {--##--STIMULATES
+[low-dose  heparin  and other methods to prevent thrombo- embolism  in gynaecological--##--PREVENTS
+minimized endothelial protrusion and loss.--##--PREVENTS
+the prevention of thrombosis was attempted--##--PREVENTS
+17 alpha-methyltestosterone does not cause substantial accumulation of glucocorticoid--##--PREVENTS
+preparation solutions which contained the smooth muscle cell relaxant--##--PREVENTS
+and other methods to prevent thrombo- embolism in gynaecological--##--PREVENTS
+physiologic saline or saline plus heparin or by--##--PREVENTS
+care , and blindness prevention agencies are often unaware--##--PREVENTS
+together with agonist , reduces nuclear accumulation of receptor--##--PREVENTS
+the need for  eye care , and  blindness  prevention agencies are often--##--PREVENTS
+recommended in severely intoxicated patients who satisfy specific indications; the prophylactic administration of  phenobarbital  to prevent  seizures--##--PREVENTS
+acid prevents gastrointestinal disorders caused by anticancer drugs.--##--PREVENTS
+ursodeoxycholic acid  prevents  gastrointestinal disorders  caused by anticancer--##--PREVENTS
+satisfy specific indications; the prophylactic administration of phenobarbital to--##--PREVENTS
+defined pathogenic tg peptides carrying iodotyrosyls have not--##--AUGMENTS
+conversely, the co-treatment of t24 cells with paclitaxel and--##--AUGMENTS
+the polyphenol extract strongly increased the apoptotic cell death--##--AUGMENTS
+neoantigenic determinants that can elicit an autoimmune response ,--##--AUGMENTS
+the mean dopamine excretion increased significantly in rats given--##--ADMINISTERED_TO
+nh4cl, whereas dopamine excretion decreased in those given nahco3.--##--ADMINISTERED_TO
+was given to rats by orogastric tube 6, 12, 18, or 24 hr before the removal of the pancreas and the preparation of isolated perfused pancreas.--##--ADMINISTERED_TO
+who have received multiple doses of gallium or--##--ADMINISTERED_TO
+homografts after bilateral nephrecto-my take up fluorescein-isothiocyanate-labeled extracts--##--ADMINISTERED_TO
+(cis-ddp) administered intravenously was performed in 77 patients--##--ADMINISTERED_TO
+are given two independent clinical examinations--##--ADMINISTERED_TO
+women over the age of forty are given--##--ADMINISTERED_TO
+female mice given manual stimulation during the early period--##--ADMINISTERED_TO
+and a diuretic (1 tablet viskaldix , containing--##--ADMINISTERED_TO
+x 10(6) c.f.u./ml) and may be useful in--##--ADMINISTERED_TO
+biopsy was performed in 15 patients with pleural-based--##--ADMINISTERED_TO
+cases, 100%) and barbiturate therapy (13 cases, 48%).--##--ADMINISTERED_TO
+woman taking an oral contraceptive agent is described.--##--ADMINISTERED_TO
+in male and female mice given manual--##--ADMINISTERED_TO
+to ascertain whether glycosylation is essential for enzymic activity, mouse--##--ADMINISTERED_TO
+of cis-diaminedichloroplatinum (ii) (cis-ddp) administered intravenously was performed in--##--ADMINISTERED_TO
+fluorescein-isothiocyanate-labeled extracts of kidney tissue and of peripheral blood--##--ADMINISTERED_TO
+symptom review, barium swallow , endoscopy and esophageal manometry--##--ADMINISTERED_TO
+all placed under the intensive care, using artificial ventilation--##--ADMINISTERED_TO
+55 massively obese patients , greater than twice ideal--##--ADMINISTERED_TO
+the same effect followed injection of 0.5--1.0 ml--##--ADMINISTERED_TO
+g) was given to rats by orogastric tube--##--ADMINISTERED_TO
+angiographic features after reperfusion therapy were randomly allocated to--##--ADMINISTERED_TO
+and may be useful in transferring globin genes--##--ADMINISTERED_TO
+in 15 patients with pleural-based space-occupying pulmonary lesions.--##--ADMINISTERED_TO
+of trans-anethole and ethanol administered simultaneously to mice ].--##--ADMINISTERED_TO
+in the posterior hypothalamus did not exhibit a--##--ADMINISTERED_TO
+trans-anethole and ethanol administered simultaneously to mice ].--##--ADMINISTERED_TO
+and to ascertain whether glycosylation is essential for--##--ADMINISTERED_TO
+receive a brief infusion of intravenous heparin for less than or equal to 24 hours (group 1), adjusted to a partial thromboplastin time of 2 times control or a prolonged infusion for greater than or equal to 72 hours (group 2), using the same titration mechanism.--##--ADMINISTERED_TO
+of this study, the children who did not--##--ADMINISTERED_TO
+amoxicillin, both antibiotics being given by intravenous route--##--ADMINISTERED_TO
+did not exhibit a behavioral effect.--##--ADMINISTERED_TO
+in a young woman taking an oral contraceptive agent--##--ADMINISTERED_TO
+being given by intravenous route during 1 week.--##--ADMINISTERED_TO
+gallium kinetics are altered in patients with acute--##--ADMINISTERED_TO
+events than the adults who did--##--ADMINISTERED_TO
+0.1% atropine only in 2 dogs and 1.0--##--ADMINISTERED_TO
+mild or moderate degree who were receiving both--##--ADMINISTERED_TO
+apoptosis (iap) protein family suppress apoptosis within tumor cells,--##--DISRUPTS
+members of the inhibitor of apoptosis (iap) protein--##--DISRUPTS
+to the pathogenesis of increased endothelial permeability in diabetes--##--PREDISPOSES
+and to the pathogenesis of intimal damage in atherosclerosis.--##--PREDISPOSES
+, and not adversely influence the results of toxoplasmosis--##--ASSOCIATED_WITH
+alleviate pain and distress associated with a t. gondii--##--ASSOCIATED_WITH
+is a common degenerative disease associated with joint--##--SYMPTOM_OF
+a common degenerative disease associated with joint dysfunction and--##--SYMPTOM_OF

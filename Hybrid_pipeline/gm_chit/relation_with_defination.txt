@@ -1,0 +1,22 @@
+CAUSES	Brings about a condition or an effect. Implied here is that an agent, such as for example, a pharmacologic substance or an organism, has brought about the effect. This includes induces, effects, evokes, and etiology. Neurocysticercosis (NCC) is one of the major causes of neurological disease
+COMPLICATES	Causes to become more severe or complex, or results in adverse effects.
+USES	Employs in the carrying out of some activity. This includes applies, utilizes, employs, and avails.
+STIMULATES	Increases or facilitates the action or function of (substance interaction).
+DISRUPTS	Alters or influences an already existing condition, state, or situation. Produces a negative effect on.
+TREATS	Applies a remedy with the object of effecting a cure or managing a condition.
+COEXISTS_WITH	Occurs together with, or jointly. Food intolerance-related constipation is characterized by proctitis.
+MANIFESTATION_OF	That part of a phenomenon which is directly observable or concretely or visibly expressed, or which gives evidence to the underlying process. This includes expression of, display of, and exhibition of.
+INTERACTS_WITH	Substance interaction.
+ADMINISTERED_TO	Given to an entity, when no assertion is made that the substance or procedure is being given as treatment.
+PREVENTS	Stops, hinders or eliminates an action or condition.
+PREDISPOSES	To be a risk to a disorder, pathology, or condition.
+INHIBITS	Decreases, limits, or blocks the action or function of (substance interaction).
+AUGMENTS	Expands or stimulates a process.
+PRODUCES	Brings forth, generates or creates. This includes yields, secretes, emits, biosynthesizes, generates, releases, discharges, and creates.
+PROCESS_OF	Disorder occurs in (higher) organism.
+PRECEDES	Occurs earlier in time. This includes antedates, comes before, is in advance of, predates, and is prior to.
+AFFECTS	Produces a direct effect on. Implied here is the altering or influencing of an existing condition, state, situation, or entity. This includes has a role in, alters, influences, predisposes, catalyzes, stimulates, regulates, depresses, impedes, enhances, contributes to, leads to, and modifies.
+DIAGNOSES	Distinguishes or identifies the nature or characteristics of.
+ASSOCIATED_WITH	Has a relationship to (genedisease relation).
+DOES_NOT_TREAT	antonyms of TREATS
+SYMPTOM_OF	departure from normal function or feeling which is noticed by a patient, reflecting the presence of an unusual state, or of a disease; subjective, observed by the patient, cannot be measured directly

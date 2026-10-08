@@ -1,0 +1,123 @@
+{
+  "dataset_name": "ADE",
+  "description": "Adverse Drug Event dataset configuration (binary classification: ADE_TRUE / ADE_FALSE)",
+  "relation_triggers": {
+    "ADE_TRUE": [
+      "caused", "cause", "causes", "causing",
+      "induced", "induce", "induces", "inducing", "induction",
+      "associated", "associated with", "association",
+      "resulted", "resulted in", "resulting", "results",
+      "developed", "develop", "develops", "developing", "development",
+      "experienced", "experience", "experiences", "experiencing",
+      "produced", "produce", "produces", "producing",
+      "led to", "leading to", "leads to",
+      "triggered", "trigger", "triggers", "triggering",
+      "suffered", "suffer", "suffers", "suffering",
+      "reported", "report", "reports", "reporting",
+      "presented", "present", "presents", "presenting",
+      "observed", "observe", "observes", "observing",
+      "occurred", "occur", "occurs", "occurring",
+      "manifested", "manifest", "manifests", "manifesting",
+      "attributed", "attribute", "attributes", "attributing",
+      "complicated", "complicate", "complicates", "complicating",
+      "exacerbated", "exacerbate", "exacerbates", "exacerbating",
+      "worsened", "worsen", "worsens", "worsening",
+      "aggravated", "aggravate", "aggravates", "aggravating",
+      "precipitated", "precipitate", "precipitates", "precipitating",
+      "following", "after", "due to", "secondary to",
+      "related", "related to",
+      "adverse", "toxicity", "toxic", "side effect", "side effects"
+    ],
+    "ADE_FALSE": [
+      "treated", "treat", "treats", "treating", "treatment",
+      "administered", "administer", "administers", "administering", "administration",
+      "prescribed", "prescribe", "prescribes", "prescribing", "prescription",
+      "effective", "efficacy", "efficacious",
+      "improved", "improve", "improves", "improving", "improvement",
+      "resolved", "resolve", "resolves", "resolving", "resolution",
+      "managed", "manage", "manages", "managing", "management",
+      "monitored", "monitor", "monitors", "monitoring",
+      "therapy", "therapeutic", "therapies",
+      "beneficial", "benefit", "benefits"
+    ]
+  },
+
+  "tiered_triggers": {
+    "ADE_TRUE": {
+      "primary": ["caused", "induced", "associated with", "resulted in", "led to", "toxicity"],
+      "secondary": ["developed", "experienced", "triggered", "suffered", "adverse", "side effect"],
+      "tertiary": ["reported", "observed", "occurred", "manifested", "following", "after", "due to"]
+    },
+    "ADE_FALSE": {
+      "primary": ["treated", "treatment", "effective", "efficacy"],
+      "secondary": ["improved", "resolved", "managed", "administered"],
+      "tertiary": ["prescribed", "therapy", "monitored", "beneficial"]
+    }
+  },
+
+  "relation_hierarchy": {
+    "priority_order": ["ADE_TRUE", "ADE_FALSE"]
+  },
+
+  "relation_aliases": {
+    "ADE_TRUE": ["ADVERSE", "ADE", "SIDE_EFFECT", "TOXICITY"],
+    "ADE_FALSE": ["NO_ADE", "SAFE", "NO_ADVERSE"]
+  },
+
+  "negation_rules": {
+    "markers": ["not", "no", "never", "without", "lack", "absence", "denied", "unlikely", "ruled out"],
+    "flip": {
+      "ADE_TRUE": "ADE_FALSE",
+      "ADE_FALSE": "ADE_TRUE"
+    },
+    "penalty": 0.7
+  },
+
+  "chunking_parameters": {
+    "window_size": 7,
+    "stride": 3,
+    "min_chunk_size": 5,
+    "max_chunk_size": 15,
+    "preserve_entity_order": true
+  },
+
+  "max_proposition_length": 25,
+  "max_tail_length": 8,
+  "symmetric_relations": [],
+
+  "scoring_weights": {
+    "primary_trigger_bonus": 0.15,
+    "secondary_trigger_bonus": 0.08,
+    "tertiary_trigger_bonus": 0.04,
+    "short_window_max": 10,
+    "short_length_bonus": 0.1,
+    "long_window_max": 18,
+    "long_length_penalty": 0.12
+  },
+
+  "disease_markers": [
+    "disease", "disorder", "syndrome", "condition", "illness", "pathology",
+    "cancer", "tumor", "neoplasm", "carcinoma", "lymphoma", "leukemia",
+    "infection", "inflammation", "failure", "injury", "damage",
+    "neuropathy", "nephropathy", "hepatotoxicity", "cardiotoxicity",
+    "patient", "patients"
+  ],
+  "mechanism_markers": [
+    "mechanism", "pathway", "metabolism", "synthesis",
+    "expression", "activity", "function", "levels", "production",
+    "protein", "enzyme", "receptor", "cytokine", "hormone",
+    "dose", "dosage", "concentration", "serum", "plasma"
+  ],
+  "dataset_specific_markers": {
+    "adverse_event_markers": [
+      "adverse", "toxicity", "toxic", "side effect", "complication",
+      "reaction", "hypersensitivity", "overdose", "intolerance",
+      "withdrawal", "dependence"
+    ],
+    "symptom_markers": [
+      "pain", "fever", "nausea", "vomiting", "rash", "fatigue",
+      "headache", "dizziness", "seizure", "bleeding", "edema",
+      "dyspnea", "diarrhea", "constipation", "anemia"
+    ]
+  }
+}

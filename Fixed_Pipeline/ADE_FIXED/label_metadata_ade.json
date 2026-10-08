@@ -1,0 +1,12 @@
+[
+  {
+    "id": "0",
+    "label": "ADE_FALSE",
+    "definition": "sentence is not ADE-related and does not describe an adverse drug event"
+  },
+  {
+    "id": "1",
+    "label": "ADE_TRUE",
+    "definition": "sentence is ADE-related and clearly describes an adverse drug event"
+  }
+]

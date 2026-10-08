@@ -1,0 +1,7 @@
+DDI ChunkScorer IMPROVED S-HRT 512 (checkpoint 1000) - any triplet match
+ANY TRIPLET MATCH: group by sentence, if any pred matches any gold → +1
+======================================================================
+Precision: 0.7509 (75.09%)
+Recall:    0.7509 (75.09%)
+F1-Score:  0.7509 (75.09%)
+State dict: {'p': 554, 'g': 554, 'c': 416}

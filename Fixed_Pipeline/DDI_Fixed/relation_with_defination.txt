@@ -1,0 +1,4 @@
+MECHANISM	Pharmacokinetic mechanism describing how one drug affects the ADME (absorption, distribution, metabolism, excretion) of another drug
+EFFECT	Clinical effect or outcome when two drugs are taken together, including changes in efficacy, blood concentration, or adverse reactions
+ADVISE	Clinical recommendation or guidance regarding concomitant use of two drugs
+INT	General statement indicating drugs interact, without specifying mechanism or effect

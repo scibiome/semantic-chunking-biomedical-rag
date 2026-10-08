@@ -1,0 +1,84 @@
+{
+  "dataset_name": "ChemProt",
+  "description": "ChemProt improved pipeline - simple semantic chunking only (no tiered triggers, no relation hierarchy). Matches ImprovedSemanticChunker style for ConfigurableSemanticChunker.",
+  "relation_triggers": {
+    "PRODUCT-OF": [
+      "product", "products",
+      "produce", "produced", "produces", "producing", "production",
+      "generate", "generated", "generates", "generating", "generation",
+      "synthesize", "synthesized", "synthesizes", "synthesizing", "synthesis",
+      "form", "formed", "forms", "forming", "formation",
+      "metabolize", "metabolized", "metabolizes", "metabolizing", "metabolism",
+      "convert", "converted", "converts", "converting", "conversion",
+      "result", "resulted", "results", "resulting"
+    ],
+    "AGONIST": [
+      "agonist", "agonists", "agonism",
+      "activate", "activated", "activates", "activating", "activation",
+      "stimulate", "stimulated", "stimulates", "stimulating", "stimulation",
+      "mimic", "mimics", "mimicked", "mimicking",
+      "bind", "binds", "bound", "binding",
+      "trigger", "triggers", "triggered", "triggering"
+    ],
+    "ANTAGONIST": [
+      "antagonist", "antagonists", "antagonism",
+      "antagonize", "antagonized", "antagonizes", "antagonizing",
+      "block", "blocked", "blocks", "blocking", "blocker",
+      "inhibit", "inhibited", "inhibits", "inhibiting", "inhibitor",
+      "prevent", "prevented", "prevents", "preventing",
+      "oppose", "opposed", "opposes", "opposing"
+    ],
+    "ACTIVATOR": [
+      "activate", "activated", "activates", "activating", "activation", "activator",
+      "stimulate", "stimulated", "stimulates", "stimulating", "stimulation", "stimulator",
+      "enhance", "enhanced", "enhances", "enhancing", "enhancement", "enhancer",
+      "induce", "induced", "induces", "inducing", "induction", "inducer",
+      "trigger", "triggered", "triggers", "triggering"
+    ],
+    "DOWNREGULATOR": [
+      "downregulate", "downregulated", "downregulates", "downregulating", "downregulation",
+      "decrease", "decreased", "decreases", "decreasing",
+      "reduce", "reduced", "reduces", "reducing", "reduction",
+      "suppress", "suppressed", "suppresses", "suppressing", "suppression",
+      "repress", "repressed", "represses", "repressing", "repression",
+      "attenuate", "attenuated", "attenuates", "attenuating", "attenuation",
+      "inhibit", "inhibited", "inhibits", "inhibiting", "inhibition",
+      "diminish", "diminished", "diminishes", "diminishing",
+      "lower", "lowered", "lowers", "lowering",
+      "deplete", "depleted", "depletes", "depleting", "depletion"
+    ]
+  },
+  "relation_aliases": {
+    "PRODUCT-OF": ["PRODUCT", "PRODUCT OF", "PRODUCED BY"],
+    "ACTIVATOR": ["ACTIVATES", "ACTIVATION"],
+    "DOWNREGULATOR": ["INHIBITOR", "INHIBITS", "DOWNREGULATES"]
+  },
+  "negation_rules": {
+    "markers": ["not", "no", "neither", "nor", "never", "without", "lack", "absent"],
+    "flip": {
+      "ACTIVATOR": "DOWNREGULATOR",
+      "AGONIST": "ANTAGONIST"
+    },
+    "penalty": 0.7
+  },
+  "symmetric_relations": [],
+  "chunking_parameters": {
+    "window_size": 7,
+    "stride": 3,
+    "min_chunk_size": 5,
+    "max_chunk_size": 15,
+    "preserve_entity_order": true
+  },
+  "max_tail_length": 6,
+  "disease_markers": [
+    "disease", "disorder", "syndrome", "condition", "infection", "inflammation",
+    "patient", "patients", "cancer", "tumor"
+  ],
+  "mechanism_markers": [
+    "mechanism", "pathway", "signaling", "metabolism", "synthesis",
+    "expression", "activity", "function", "levels", "production",
+    "protein", "proteins", "enzyme", "enzymes", "receptor", "receptors",
+    "chemical", "compound", "compounds", "binding", "gene", "genes"
+  ],
+  "dataset_specific_markers": {}
+}

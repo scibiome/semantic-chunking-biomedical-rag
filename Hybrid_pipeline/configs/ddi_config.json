@@ -1,0 +1,135 @@
+{
+  "dataset_name": "DDI",
+  "description": "Drug-Drug Interaction dataset configuration",
+  "relation_triggers": {
+    "EFFECT": [
+      "effect", "effects", "affecting", "affected",
+      "interaction", "interactions", "interacting", "interacted",
+      "additive", "additive effects",
+      "potentiation", "potentiate", "potentiated", "potentiating",
+      "enhancement", "enhance", "enhanced", "enhancing",
+      "increase", "increased", "increasing", "increases",
+      "decrease", "decreased", "decreasing", "decreases",
+      "reduce", "reduced", "reducing", "reduces", "reduction",
+      "elevate", "elevated", "elevating", "elevates", "elevation",
+      "lower", "lowered", "lowering", "lowers",
+      "prolong", "prolonged", "prolonging", "prolongs", "prolongation",
+      "toxicity", "toxic",
+      "adverse", "adversely",
+      "risk", "risks",
+      "levels", "concentration", "concentrations"
+    ],
+    "ADVISE": [
+      "should", "should not", "shouldn't",
+      "must", "must not", "mustn't",
+      "recommend", "recommended", "recommendation", "recommends",
+      "advise", "advised", "advising", "advises",
+      "avoid", "avoided", "avoiding", "avoids", "avoidance",
+      "caution", "cautioned", "cautionary",
+      "monitor", "monitored", "monitoring", "monitors",
+      "adjust", "adjusted", "adjusting", "adjusts", "adjustment",
+      "discontinue", "discontinued", "discontinuing", "discontinues",
+      "contraindicated", "contraindication",
+      "warning", "warn", "warned", "warns",
+      "necessary", "required", "require", "requires"
+    ],
+    "MECHANISM": [
+      "inhibits", "inhibit", "inhibited", "inhibiting", "inhibition", "inhibitor",
+      "blocks", "block", "blocked", "blocking",
+      "metabolize", "metabolized", "metabolizing", "metabolism",
+      "activate", "activated", "activating", "activation", "activates",
+      "induce", "induced", "inducing", "induction", "induces", "inducer",
+      "suppress", "suppressed", "suppressing", "suppression", "suppresses",
+      "enzyme", "enzymes",
+      "substrate", "substrates",
+      "cyp", "cytochrome", "p450",
+      "pathway", "pathways",
+      "mechanism", "mechanisms",
+      "mediated", "mediate", "mediates", "mediating",
+      "clearance",
+      "absorption", "absorb", "absorbed",
+      "elimination", "eliminate", "eliminated",
+      "excretion", "excrete", "excreted",
+      "bioavailability",
+      "pharmacokinetic", "pharmacokinetics",
+      "pharmacodynamic", "pharmacodynamics"
+    ],
+    "INT": [
+      "used", "use", "using", "uses",
+      "combination", "combined", "combine", "combining",
+      "together", "concomitant", "concomitantly",
+      "co-administered", "coadministered", "co-administration",
+      "concurrent", "concurrently",
+      "simultaneous", "simultaneously",
+      "with", "along with",
+      "therapy", "treatment", "treated", "treating"
+    ]
+  },
+  "relation_hierarchy": {
+    "priority_order": ["MECHANISM", "EFFECT", "ADVISE", "INT"]
+  },
+  "relation_aliases": {
+    "ADVISE": ["ADVICE", "RECOMMEND"],
+    "EFFECT": ["EFFECTS"]
+  },
+  "negation_rules": {
+    "markers": ["not", "no", "never", "without", "lack"],
+    "penalty": 0.8
+  },
+  "chunking_parameters": {
+    "window_size": 6,
+    "stride": 2,
+    "min_chunk_size": 4,
+    "max_chunk_size": 9,
+    "preserve_entity_order": true
+  },
+  "max_tail_length": 5,
+  "class_markers": [
+    "class", "drug class", "type", "category", "group"
+  ],
+  "prevent_class_swaps": true,
+  "scoring_weights": {
+    "primary_trigger_bonus": 0.15,
+    "secondary_trigger_bonus": 0.08,
+    "tertiary_trigger_bonus": 0.05,
+    "short_window_max": 8,
+    "short_length_bonus": 0.1,
+    "long_window_max": 15,
+    "long_length_penalty": 0.15
+  },
+  "disease_markers": [
+    "patient", "patients",
+    "disease", "disorder", "syndrome", "condition",
+    "hypertension", "diabetes", "infection", "pain",
+    "depression", "anxiety", "seizure", "seizures",
+    "arrhythmia", "arrhythmias",
+    "thrombosis", "embolism",
+    "bleeding", "hemorrhage"
+  ],
+  "mechanism_markers": [
+    "enzyme", "enzymes",
+    "cyp", "cytochrome", "p450",
+    "metabolism", "metabolite", "metabolites",
+    "protein", "receptor", "receptors",
+    "pathway", "pathways",
+    "mechanism", "mechanisms",
+    "substrate", "inhibitor", "inducer",
+    "clearance", "elimination",
+    "absorption", "bioavailability",
+    "pharmacokinetic", "pharmacodynamic",
+    "plasma", "serum", "blood"
+  ],
+  "dataset_specific_markers": {
+    "drug_markers": [
+      "drug", "drugs", "medication", "medications",
+      "pill", "pills", "tablet", "tablets",
+      "dose", "dosage", "dosing"
+    ],
+    "interaction_severity": [
+      "severe", "serious", "major",
+      "moderate", "minor",
+      "life-threatening", "fatal",
+      "contraindicated"
+    ]
+  }
+}

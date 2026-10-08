@@ -1,0 +1,3 @@
+0	ADE_FALSE	sentence is not ADE-related and does not describe an adverse drug event
+1	ADE_TRUE	sentence is ADE-related and clearly describes an adverse drug event
+

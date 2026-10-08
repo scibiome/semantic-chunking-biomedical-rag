@@ -1,0 +1,15 @@
+DDI GROUPED MODEL (Standard) - Checkpoint 10000
+TRIPLET-LEVEL EVALUATION (same as hybrid_s_hrt_10000.py)
+================================================================================
+Strategy: Only consider FIRST predicted triplet (improves precision)
+          Count all ground truth triplets, calculate precision/recall at triplet level
+================================================================================
+
+Precision:  0.7816 (78.16%)
+Recall:     0.7816 (78.16%)
+F1-Score:   0.7816 (78.16%)
+================================================================================
+State dict: {'p': 554, 'c': 433, 'g': 554}
+  Predicted triplets: 554 (one per sentence, first prediction only)
+  Ground truth triplets: 554 (one per sentence, first or matching)
+  Correct triplets: 433

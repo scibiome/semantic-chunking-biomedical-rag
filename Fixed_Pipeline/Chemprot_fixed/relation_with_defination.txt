@@ -1,0 +1,5 @@
+ACTIVATOR	A chemical substance that increases the activity or function of a protein or enzyme. Activators enhance biological processes by promoting protein function.
+AGONIST	A chemical substance that binds to and activates a receptor protein, mimicking the action of a natural ligand. Agonists trigger biological responses by receptor activation.
+ANTAGONIST	A chemical substance that binds to a receptor protein and blocks or dampens the biological response. Antagonists prevent receptor activation by blocking binding sites.
+DOWNREGULATOR	A chemical substance that decreases the activity, expression, or function of a protein or enzyme. Downregulators suppress biological processes by reducing protein function or availability.
+PRODUCT-OF	A protein or molecule that is produced or synthesized as a result of a chemical or enzymatic reaction. The chemical acts as a substrate in the biosynthetic process.

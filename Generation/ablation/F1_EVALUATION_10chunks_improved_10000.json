@@ -1,0 +1,14 @@
+{
+  "model": "10chunks_improved_10000",
+  "metrics": {
+    "all-prec": 0.6756756756756757,
+    "all-recall": 0.6451612903225806,
+    "all-f1": 0.66006600660066
+  },
+  "state_dict": {
+    "p": 444,
+    "c": 300,
+    "g": 465
+  },
+  "total_samples": 465
+}

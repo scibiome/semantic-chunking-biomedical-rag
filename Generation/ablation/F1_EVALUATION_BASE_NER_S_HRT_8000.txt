@@ -1,0 +1,8 @@
+BASE NER S-HRT MODEL (checkpoint 8000) EVALUATION RESULTS
+(Symmetry rule: head-tail swap counts as correct for all relations)
+================================================================================
+Precision:  0.8151
+Recall:     0.8151
+F1-Score:   0.8151
+================================================================================
+State dict: {'p': 465, 'c': 379, 'g': 465}

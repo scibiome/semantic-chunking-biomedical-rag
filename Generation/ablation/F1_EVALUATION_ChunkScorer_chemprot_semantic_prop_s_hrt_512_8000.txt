@@ -1,0 +1,6 @@
+CHEMPROT ChunkScorer Semantic Prop S-HRT 512 (checkpoint 8000) EVALUATION RESULTS
+============================================================
+Precision: 0.8752 (87.52%)
+Recall:    0.8671 (86.71%)
+F1-Score:  0.8711 (87.11%)
+State dict: {'p': 3406, 'c': 2981, 'g': 3438}

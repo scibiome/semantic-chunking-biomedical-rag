@@ -1,0 +1,20 @@
+# --- ML checkpoints / outputs ---
+**/checkpoint-*/
+**/checkpoints/
+**/runs/
+**/wandb/
+**/logs/
+
+# --- large model files ---
+**/*.pt
+**/*.bin
+**/*.ckpt
+**/*.safetensors
+
+# --- caches ---
+__pycache__/
+*.pyc
+
+# --- embeddings / databases ---
+*.npy
+*.db

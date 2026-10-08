@@ -1,0 +1,371 @@
+{
+  "dataset_name": "GM-CIHT",
+  "description": "Semantic + Proposition chunking - no tiered triggers, no hierarchy",
+  "relation_triggers": {
+    "INHIBITS": [
+      "inhibits",
+      "inhibit",
+      "inhibited",
+      "inhibiting",
+      "inhibition",
+      "inhibitor",
+      "inhibitory",
+      "blocks",
+      "block",
+      "blocked",
+      "blocking",
+      "suppresses",
+      "suppress",
+      "suppressed",
+      "suppressing",
+      "suppression",
+      "prevents",
+      "prevent",
+      "prevented",
+      "preventing",
+      "prevention",
+      "reduces",
+      "reduce",
+      "reduced",
+      "reducing",
+      "reduction",
+      "decreases",
+      "decrease",
+      "decreased",
+      "decreasing",
+      "downregulates",
+      "downregulate",
+      "downregulated",
+      "downregulating",
+      "downregulation",
+      "antagonizes",
+      "antagonize",
+      "antagonized",
+      "antagonizing",
+      "antagonist",
+      "inactivates",
+      "inactivate",
+      "inactivated",
+      "inactivating",
+      "inactivation",
+      "attenuates",
+      "attenuate",
+      "attenuated",
+      "attenuating",
+      "attenuation",
+      "depletes",
+      "deplete",
+      "depleted",
+      "depleting",
+      "depletion"
+    ],
+    "STIMULATES": [
+      "stimulates",
+      "stimulate",
+      "stimulated",
+      "stimulating",
+      "stimulation",
+      "activates",
+      "activate",
+      "activated",
+      "activating",
+      "activation",
+      "activator",
+      "enhances",
+      "enhance",
+      "enhanced",
+      "enhancing",
+      "enhancement",
+      "promotes",
+      "promote",
+      "promoted",
+      "promoting",
+      "promotion",
+      "promoter",
+      "increases",
+      "increase",
+      "increased",
+      "increasing",
+      "upregulates",
+      "upregulate",
+      "upregulated",
+      "upregulating",
+      "upregulation",
+      "potentiates",
+      "potentiate",
+      "potentiated",
+      "potentiating",
+      "induces",
+      "induce",
+      "induced",
+      "inducing",
+      "induction",
+      "inducer"
+    ],
+    "TREATS": [
+      "treats",
+      "treat",
+      "treated",
+      "treating",
+      "treatment",
+      "therapy",
+      "therapeutic",
+      "therapies",
+      "prescribed",
+      "prescribe",
+      "prescribing",
+      "prescription",
+      "administered",
+      "administer",
+      "administering",
+      "administration",
+      "medication",
+      "medicate",
+      "drug",
+      "drugs"
+    ],
+    "AFFECTS": [
+      "affects",
+      "affect",
+      "affected",
+      "affecting",
+      "modulates",
+      "modulate",
+      "modulated",
+      "modulating",
+      "modulation",
+      "influences",
+      "influence",
+      "influenced",
+      "influencing",
+      "impacts",
+      "impact",
+      "impacted",
+      "impacting",
+      "regulates",
+      "regulate",
+      "regulated",
+      "regulating",
+      "regulation",
+      "alters",
+      "alter",
+      "altered",
+      "altering",
+      "alteration"
+    ],
+    "INTERACTS_WITH": [
+      "binds",
+      "bind",
+      "bound",
+      "binding",
+      "interacts",
+      "interact",
+      "interacted",
+      "interacting",
+      "interaction",
+      "associates",
+      "associate",
+      "associated",
+      "associating",
+      "association",
+      "couples",
+      "couple",
+      "coupled",
+      "coupling"
+    ],
+    "PREVENTS": [
+      "prevents",
+      "prevent",
+      "prevented",
+      "preventing",
+      "prevention",
+      "prophylaxis",
+      "prophylactic",
+      "protective",
+      "protect",
+      "protected"
+    ],
+    "CAUSES": [
+      "causes",
+      "cause",
+      "caused",
+      "causing",
+      "induces",
+      "induce",
+      "induced",
+      "inducing",
+      "induction",
+      "triggers",
+      "trigger",
+      "triggered",
+      "triggering",
+      "elicits",
+      "elicit",
+      "elicited",
+      "eliciting",
+      "produces",
+      "produce",
+      "produced",
+      "producing",
+      "production"
+    ],
+    "COEXISTS_WITH": [
+      "coexists with",
+      "coexist",
+      "coexisting",
+      "coexisted",
+      "associated with",
+      "association",
+      "associations"
+    ]
+  },
+  "relation_hierarchy": {
+    "INHIBITS": {
+      "priority": 0
+    },
+    "STIMULATES": {
+      "priority": 0
+    },
+    "TREATS": {
+      "priority": 0
+    },
+    "AFFECTS": {
+      "priority": 0
+    },
+    "INTERACTS_WITH": {
+      "priority": 0
+    },
+    "PREVENTS": {
+      "priority": 0
+    },
+    "CAUSES": {
+      "priority": 0
+    },
+    "COEXISTS_WITH": {
+      "priority": 0
+    }
+  },
+  "relation_aliases": {
+    "INHIBITS": [
+      "INHIBIT",
+      "INHIBITION",
+      "INHIBITORY"
+    ],
+    "STIMULATES": [
+      "STIMULATE",
+      "ACTIVATES",
+      "ACTIVATION",
+      "ACTIVATOR"
+    ],
+    "TREATS": [
+      "TREAT",
+      "THERAPY",
+      "TREATMENT",
+      "THERAPEUTIC"
+    ],
+    "AFFECTS": [
+      "AFFECT",
+      "INFLUENCE",
+      "IMPACT"
+    ],
+    "PREVENTS": [
+      "PREVENT",
+      "PREVENTION"
+    ],
+    "CAUSES": [
+      "CAUSE",
+      "INDUCE",
+      "TRIGGER"
+    ],
+    "INTERACTS_WITH": [
+      "INTERACT",
+      "INTERACTION",
+      "BINDS",
+      "BINDING"
+    ]
+  },
+  "negation_rules": {
+    "markers": [
+      "not",
+      "no",
+      "does not",
+      "doesn't",
+      "non-",
+      "never",
+      "without"
+    ],
+    "flip": {
+      "STIMULATES": "INHIBITS",
+      "INHIBITS": "STIMULATES",
+      "TREATS": "DOES_NOT_TREAT"
+    },
+    "penalty": 0.7
+  },
+  "chunking_parameters": {
+    "window_size": 8,
+    "stride": 3,
+    "min_chunk_size": 5,
+    "max_chunk_size": 12,
+    "preserve_entity_order": true,
+    "short_mode": {
+      "window_size": 5,
+      "stride": 2,
+      "min_chunk_size": 4,
+      "max_chunk_size": 10
+    }
+  },
+  "max_proposition_length": 20,
+  "max_tail_length": 6,
+  "symmetric_relations": [
+    "INTERACTS_WITH",
+    "COEXISTS_WITH"
+  ],
+  "scoring_weights": {
+    "primary_trigger_bonus": 0.12,
+    "secondary_trigger_bonus": 0.06,
+    "tertiary_trigger_bonus": 0.03,
+    "short_window_max": 8,
+    "short_length_bonus": 0.12,
+    "long_window_max": 16,
+    "long_length_penalty": 0.15
+  },
+  "disease_markers": [
+    "disease",
+    "disorder",
+    "syndrome",
+    "condition",
+    "illness",
+    "pathology",
+    "cancer",
+    "tumor",
+    "diabetes",
+    "hypertension",
+    "infection",
+    "inflammation",
+    "patient",
+    "patients"
+  ],
+  "mechanism_markers": [
+    "mechanism",
+    "pathway",
+    "signaling",
+    "metabolism",
+    "synthesis",
+    "expression",
+    "activity",
+    "function",
+    "levels",
+    "production",
+    "protein",
+    "enzyme",
+    "receptor",
+    "cytokine",
+    "hormone",
+    "metabolite"
+  ],
+  "dataset_specific_markers": {},
+  "use_semantic_chunking": true,
+  "use_proposition_chunking": true,
+  "use_tiered_triggers": false,
+  "use_relation_hierarchy": false
+}

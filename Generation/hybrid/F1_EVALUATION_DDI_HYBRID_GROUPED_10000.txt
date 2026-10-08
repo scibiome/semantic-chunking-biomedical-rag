@@ -1,0 +1,17 @@
+DDI GROUPED MODEL (Hybrid) - Checkpoint 10000
+SENTENCE-LEVEL EVALUATION (PARSE ALL PREDICTIONS, FIRST GROUND TRUTH ONLY)
+================================================================================
+Strategy: Parse ALL predicted triplets from entire response
+          Parse ALL ground truth triplets, but only evaluate against FIRST one
+          If ANY predicted triplet matches FIRST ground truth triplet, sentence is correct
+          Calculate precision/recall at sentence level (denominator = 554 sentences)
+================================================================================
+
+Precision:  0.7924 (79.24%)
+Recall:     0.7924 (79.24%)
+F1-Score:   0.7924 (79.24%)
+================================================================================
+State dict: {'p': 554, 'c': 439, 'g': 554}
+  Total sentences: 554 (denominator for precision)
+  Total sentences: 554 (denominator for recall)
+  Sentences with correct match: 439 (any prediction matching first ground truth)

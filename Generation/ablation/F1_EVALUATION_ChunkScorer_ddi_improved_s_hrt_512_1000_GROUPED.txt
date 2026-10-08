@@ -1,0 +1,7 @@
+DDI ChunkScorer IMPROVED S-HRT 512 (checkpoint 1000) - GROUPED-style evaluation
+SENTENCE-LEVEL (parse ALL predictions, FIRST ground truth, symmetric swap)
+======================================================================
+Precision: 0.3757 (37.57%)
+Recall:    0.3757 (37.57%)
+F1-Score:  0.3757 (37.57%)
+State dict: {'p': 1094, 'c': 411, 'g': 1094}

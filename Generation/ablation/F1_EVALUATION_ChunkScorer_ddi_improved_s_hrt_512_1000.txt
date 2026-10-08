@@ -1,0 +1,6 @@
+DDI ChunkScorer IMPROVED S-HRT 512 (checkpoint 1000) EVALUATION RESULTS
+============================================================
+Precision: 0.3712 (37.12%)
+Recall:    0.3583 (35.83%)
+F1-Score:  0.3647 (36.47%)
+State dict: {'p': 1056, 'c': 392, 'g': 1094}
