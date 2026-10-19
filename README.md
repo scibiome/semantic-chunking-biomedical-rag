@@ -1,93 +1,206 @@
-# RiyaAhuja
+# Configurable Semantic Chunking for Biomedical Retrieval-Augmented Generation
 
+Code for the article **"Configurable Semantic Chunking for Biomedical Information Extraction in Retrieval-Augmented Generation"** (Ahuja, Kacprowski, Shiasi Sardoabi).
 
+- Preprint: [arXiv:2608.31139](https://arxiv.org/abs/2608.31139)
+- Large precomputed files (embeddings, generated data): Zenodo record in preparation; the link will be added here.
+- Built on [BiomedRAG](https://github.com/ToneLi/BIoMedRAG) (Li et al.)
 
-## Getting started
+## 1) Overview
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+BiomedRAG retrieves evidence for an input sentence by splitting it into fixed windows of five words, scoring the chunks with a learned chunk scorer, and passing the selected chunks to an LLM that generates the output (triples or labels). Fixed windows can fragment multi-token entities and separate a relation trigger from the arguments it connects.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+This repository replaces **only the chunk-construction stage** with a configurable semantic chunking framework. The embedding model, chunk scorer, generator, preprocessing and evaluation protocol are the same as in BiomedRAG, so the workflow below follows the original code structure.
 
-## Add your files
+![Overview of the configurable semantic chunking pipeline](figures/pipeline_overview.png)
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+The chunking framework combines:
+
+- **Entity-preserving sliding windows**: windows never cut through a detected entity.
+- **Trigger-centered chunking** with **tiered trigger prioritization**: chunks are built around relation trigger words, ordered by tier.
+- **Relation hierarchy resolution**: when several relations match, a configured hierarchy decides which one wins.
+- **Proposition-first extraction**: minimal subject-trigger-object spans are extracted first.
+- **Fixed-window fallback** when no semantic chunk is found.
+
+Candidates from all sources are ranked by cosine similarity to the target relation definition, with a bias toward structurally complete (proposition) spans. All dataset-specific knowledge (trigger vocabularies, tier assignments, relation hierarchies, window parameters) lives in **JSON configuration files**, so adapting the chunker to a new relation set does not require code changes.
+
+Evaluated on **GM-CIHT**, **DDI** and **ChemProt** (triple extraction) and **ADE** (binary classification), with component-wise ablations on GM-CIHT.
+
+## 2) Repository structure
+
+| Folder | Contents |
+|---|---|
+| `Fixed_Pipeline/` | BiomedRAG baseline with fixed 5-word windows. `GM_CHIT_FIXED_PIPELINE/`, `Chemprot_fixed/`, `DDI_Fixed/`, `ADE_FIXED/` hold the numbered data-preparation scripts per dataset. |
+| `Entity_aware_semantic/` | Entity-aware semantic chunking variant (scripts with the `_improved` suffix). |
+| `Hybrid_pipeline/` | **Full configurable chunker.** `configurable_semantic_chunker.py`, `proposition_chunker.py`, `configs/` (JSON configurations), and per-dataset folders `gm_chit/`, `chemprot/`, `ddi/` with the numbered `hybrid_*` scripts. |
+| `Ablation Studies/` | Ablation variants on GM-CIHT: semantic propositions, tiered chunking, hybrid with scoring, hybrid with NER. |
+| `Chunk_scorer/` | Chunk scorer: modified `transformers` files (`trainer.py`, `ChuckWeights.py`, `SplitInputsChunks.py`, ...), scorer data creation and `apply_chunk_scorer_integration.py`. |
+| `Triple_trainer/` | LLM fine-tuning with the chunk scorer (`trainer_withChunkScorer_*.py`). |
+| `Generation/` | Generation (`chuck5_generation_*.py`) and F1 evaluation (`0_F1_triplet_evalution_*.py`) scripts, plus saved evaluation results (`F1_EVALUATION_*.json/.txt`). Subfolders `hybrid/` and `ablation/`. |
+| `Miscellaneous/` | Development and legacy scripts, SLURM job files (`slurm/`), KNN demo-set builders. Kept for transparency; not needed for the main pipeline. |
+
+## 3) Configuration files
+
+The configurations are in `Hybrid_pipeline/configs/`:
+
+| File | Used for |
+|---|---|
+| `gmciht_config.json` | GM-CIHT |
+| `ddi_config.json` | DDI |
+| `chemprot_config.json`, `chemprot_config_improved.json` | ChemProt |
+| `ade_config.json` | ADE |
+| `ablation/gmciht_config_*.json` | One file per ablation step on GM-CIHT: `fixed`, `semantic_only`, `semantic_prop`, `semantic_prop_hierarchy`, `semantic_prop_tiered`, `hybrid_full` |
+
+Each configuration defines:
+
+- **Trigger lexicons**: relation type to trigger words
+- **Tiered trigger definitions**: primary, secondary and tertiary triggers per relation type
+- **Relation hierarchy**: a base priority for every relation type
+- **Negation rules**: negation markers and relation-flipping mappings
+- **Chunking parameters**: window size, stride, and minimum/maximum chunk length
+
+To use the chunker on a new dataset, copy an existing configuration, edit these entries, and point the scripts of your dataset folder at the new file.
+
+Entity-aware window parameters used in the article, selected per dataset by grid search on the development set (the JSON files are authoritative):
+
+| Dataset | Window | Stride | Min length | Max length |
+|---|---|---|---|---|
+| GM-CIHT | 8 | 3 | 5 | 12 |
+| DDI | 6 | 2 | 4 | 9 |
+| ChemProt | 5 | 2 | 3 | 10 |
+| ADE | 7 | 3 | 5 | 15 |
+
+Fixed for all datasets: trigger-centered windows of up to 9 words (4 words on each side of the trigger), proposition spans of at most 25 tokens expanded by 3 tokens on each side, proposition bias over the top 5 candidates, and the top 2 chunks selected per sentence.
+
+## 4) Environment
+
+The environment is the one of BiomedRAG:
+
+- Python 3.8
+- `transformers==4.31.0`
+- PyTorch with CUDA, `bitsandbytes` (the 13B models are loaded in quantized form), `numpy`
+- BiomedRAG used A100 GPUs. Our experiments ran on NVIDIA A40 GPUs (44 GB) with 4-bit NF4 quantization.
+
+The chunk scorer uses modified `transformers` source files. As in BiomedRAG, install `transformers` from source and copy the files from `Chunk_scorer/transformers/` over/into the corresponding location of your installation (replace `trainer.py`, add `SplitInputsChunks.py` and `ChuckWeights.py`).
+
+Models used in our experiments:
+
+- **Embeddings:** [MedLLaMA-13B](https://huggingface.co/chaoyi-wu/MedLLaMA_13B) (Wu et al., 2023) for chunks and relation definitions, maximum input length 512 tokens, mean pooling over the token-level hidden states.
+- **Chunk scorer:** initialized from Llama-2-13B and trained with LoRA (rank 8, alpha 8, dropout 0.1) for 1,000 steps with AdamW in bfloat16. One scorer is trained per dataset. Because of GPU memory (44 GB A40 instead of 80 GB A100) we used `max_seq_length=1024` instead of the 4098 used in BiomedRAG.
+- **Generator:** unchanged from BiomedRAG.
+
+Model and data paths are set at the top of each script, either through a `MODEL_ID` constant or as absolute paths from our cluster (for example `/home/users/riah/models/MedLLaMA_13B`). Replace them with your own locations. Model weights are not part of this repository.
+
+## 5) Data
+
+The datasets are **not redistributed**. Obtain them from their original sources and respect their licenses:
+
+| Dataset | Task | Relation types | Train / Dev / Test | Source |
+|---|---|---|---|---|
+| GM-CIHT | Triple extraction | 22 | 3,734 / 492 / 465 | [Li et al., 2024](https://arxiv.org/abs/2310.18463); data in the `dataset` folder of the [BiomedRAG repository](https://github.com/ToneLi/BIoMedRAG) |
+| DDI | Triple extraction | 4 | 1,027 / 258 / 1,094 | [SemEval-2013 Task 9](https://aclanthology.org/S13-2056/) (instances labeled "none" excluded) |
+| ChemProt | Triple extraction | 5 | 4,111 / 2,411 / 3,438 | BioCreative VI CHEMPROT track (Krallinger et al., 2017) |
+| ADE | Relation classification | 2 | 4,000 / 975 / 497 | [ADE corpus](https://doi.org/10.1016/j.jbi.2012.04.008) (Gurulingappa et al., 2012) |
+
+All datasets are converted to one unified JSONL format (one record per line). For ADE, the source `text` and `label` fields are mapped to this format during preprocessing.
 
 ```
-cd existing_repo
-git remote add origin https://git.rz.tu-bs.de/scibiome/theses/msc/riyaahuja.git
-git branch -M main
-git push -uf origin main
+{"PREDICATE": "INTERACTS_WITH",
+ "SUBJECT_TEXT": "nalorphine",
+ "OBJECT_TEXT": "morphine",
+ "SENTENCE": "[on the effect of respiration of a combination of  morphine -like acting pethidine with the  morphine  antagonist  nalorphine ]."}
 ```
 
-## Integrate with your tools
+Edit the input and output paths at the top of the scripts to match your setup. Many were written for a SLURM cluster (`*.slurm` files show the job settings we used).
 
-- [ ] [Set up project integrations](https://git.rz.tu-bs.de/scibiome/theses/msc/riyaahuja/-/settings/integrations)
+### Precomputed files
 
-## Collaborate with your team
+Embedding vectors (`.npy`), candidate databases and large generated files (training/test instruction files, top-n outputs) are too large for GitHub and will be made available on Zenodo (link to follow). Once available:
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+```bash
+tar -xf zenodo_embeddings.tar
+tar -xzf zenodo_generated_outputs.tar.gz
+```
 
-## Test and Deploy
+Extract both archives into the root of this repository; they keep the folder structure. Small result files (for example `Generation/**/F1_EVALUATION_*`) are already included here.
 
-Use the built-in continuous integration in GitLab.
+## 6) How to run
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+The workflow has the same six stages as BiomedRAG. Run the numbered scripts of a folder in order of their numbers, updating file names and locations as needed. The example below uses the full hybrid pipeline on GM-CIHT.
 
-***
+**Step 1: Build chunk database and scorer data** (`Hybrid_pipeline/gm_chit/`)
 
-# Editing this README
+```bash
+cd Hybrid_pipeline/gm_chit
+CUDA_VISIBLE_DEVICES=0 python hybrid_0_relation_embedding.py
+CUDA_VISIBLE_DEVICES=0 python hybrid_1_chunk_mapping.py
+CUDA_VISIBLE_DEVICES=0 python hybrid_1b_store_embeddings.py
+CUDA_VISIBLE_DEVICES=0 python hybrid_2_make_train_chunks.py
+CUDA_VISIBLE_DEVICES=0 python hybrid_2_make_test_chunks.py
+CUDA_VISIBLE_DEVICES=0 python hybrid_3_make_topn_scored.py
+CUDA_VISIBLE_DEVICES=0 python hybrid_4_make_candidate_embeddings.py
+CUDA_VISIBLE_DEVICES=0 python hybrid_5_instruction_scored.py
+```
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+Large embedding steps can be run in shards (see the `*.slurm` files) and merged with the shard-merging scripts (for example `merge_hybrid_shards.py`). The ChemProt and DDI folders (`Hybrid_pipeline/chemprot/`, `Hybrid_pipeline/ddi/`) contain the dataset-specific versions of these steps, used with their own configuration files. The fixed-window baseline is built the same way with the scripts in `Fixed_Pipeline/<dataset folder>/`.
 
-## Suggestions for a good README
+**Step 2: Train and apply the chunk scorer** (`Chunk_scorer/`)
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+Train one scorer per dataset on the scorer data created in step 1, with the settings in section 4, using the modified `transformers` files described in section 4. The trained scorer is then applied to the training and test candidates (see `apply_chunk_scorer_integration.py` and the scorer-data scripts in this folder) to select the chunks passed to the LLM.
 
-## Name
-Choose a self-explaining name for your project.
+**Step 3: Fine-tune the LLM for triple extraction** (`Triple_trainer/`)
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+```bash
+cd Triple_trainer
+CUDA_VISIBLE_DEVICES=0 python trainer_withChunkScorer_hybrid_s_hrt.py
+```
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+**Step 4: Generate triples** (`Generation/hybrid/`)
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+```bash
+cd Generation/hybrid
+CUDA_VISIBLE_DEVICES=0 python chuck5_generation_hybrid_s_hrt_10000.py
+```
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+The number in the file name (`8000` or `10000`) is the training checkpoint step used for generation.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+**Step 5: Evaluate**
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+```bash
+python 0_F1_triplet_evalution_hybrid_s_hrt_10000.py
+```
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+Scripts for the fixed baseline, the entity-aware variant and the ablations are in `Generation/` and `Generation/ablation/`, with matching names.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+## 7) Results
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+Micro-averaged F1 as reported in the article. The effect of the chunking strategy depends on the dataset.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+| Dataset | Fixed windows (BiomedRAG) | Configurable semantic chunking |
+|---|---|---|
+| GM-CIHT | 74.2 | **82.6** |
+| DDI | 78.2 | **79.2** |
+| ChemProt | **87.4** | 86.6 |
+| ADE | **88.8** | 87.3 |
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+Our fixed baseline reproduces below the originally published BiomedRAG figure on GM-CIHT (74.2 versus 81.42 F1). Likely contributing factors are the shorter scorer sequence length forced by GPU memory (1024 versus 4098), the scorer integration code, which BiomedRAG does not release and which we implemented from the paper, and our dataset-specific preprocessing for DDI, ChemProt and ADE. Both conditions here use the same hardware, preprocessing, scorer training, generation and evaluation settings, so the differences reflect chunk construction. See the article for the ablation study and discussion.
 
-## License
-For open source projects, say how it is licensed.
+## 8) Citation
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+If you use this code or data, please cite the article:
+
+```bibtex
+@misc{ahuja2026configurable,
+  title         = {Configurable Semantic Chunking for Biomedical Information Extraction in Retrieval-Augmented Generation},
+  author        = {Ahuja, Riya and Kacprowski, Tim and Shiasi Sardoabi, Roya},
+  year          = {2026},
+  eprint        = {2608.31139},
+  archivePrefix = {arXiv}
+}
+```
+
+Please also cite BiomedRAG (Li et al.), on which this work builds.
+
+## 9) Acknowledgements
+
+GPU resources for the experiments were funded by the German Research Foundation (Deutsche Forschungsgemeinschaft, DFG), grant number 527049502. This work builds on BiomedRAG (Li et al.).
